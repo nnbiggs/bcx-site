@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -20,14 +21,26 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-              <span className="text-xl font-bold">BCX</span>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative h-12 w-40 sm:w-48">
+              <Image
+                src="/bcx-logo.png"
+                alt="Bergen County Xpress"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
+
             <div className="hidden sm:block">
-              <div className="text-xl font-bold text-gray-900">Bergen County Xpress</div>
-              <div className="text-xs text-gray-600">Track & Field Club</div>
+              <div className="text-xl font-bold text-gray-900">
+                Bergen County Xpress
+              </div>
+              <div className="text-xs text-gray-600">
+                Track & Field Club
+              </div>
             </div>
           </Link>
 
@@ -39,8 +52,8 @@ export default function Navigation() {
                 href={link.href}
                 className={`text-sm font-semibold transition-colors ${
                   link.href === '/register'
-                    ? 'rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2'
+                    : 'text-gray-700 hover:text-red-600'
                 }`}
               >
                 {link.label}
@@ -51,12 +64,13 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className="sr-only">Open main menu</span>
+
             {!isOpen ? (
               <svg
                 className="h-6 w-6"
@@ -64,9 +78,12 @@ export default function Navigation() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                aria-hidden="true"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
             ) : (
               <svg
@@ -75,9 +92,12 @@ export default function Navigation() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                aria-hidden="true"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             )}
           </button>
@@ -94,8 +114,8 @@ export default function Navigation() {
                 href={link.href}
                 className={`block rounded-md px-3 py-2 text-base font-medium ${
                   link.href === '/register'
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                    ? 'bg-red-600 text-white hover:bg-red-700'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-red-600'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
