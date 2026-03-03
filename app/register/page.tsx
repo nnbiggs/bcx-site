@@ -1,0 +1,454 @@
+'use client';
+
+import type { Metadata } from 'next';
+import { useState } from 'react';
+
+export default function Register() {
+  const [formData, setFormData] = useState({
+    athleteFirstName: '',
+    athleteLastName: '',
+    dateOfBirth: '',
+    gender: '',
+    parentGuardianName: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    emergencyContact: '',
+    emergencyPhone: '',
+    program: '',
+    experience: '',
+    medicalConditions: '',
+    medications: '',
+    allergies: '',
+    insuranceProvider: '',
+    insurancePolicyNumber: '',
+    agreeToTerms: false,
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    setIsSubmitting(false);
+    setSubmitStatus('success');
+    // In a real app, you would send this data to your backend
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+    <div className="bg-white">
+      {/* Header */}
+      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Register for BCX</h1>
+          <p className="mt-4 text-xl text-blue-100">
+            Join Bergen County Xpress and start your track & field journey
+          </p>
+        </div>
+      </section>
+
+      {/* Registration Form */}
+      <section className="py-16">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          {submitStatus === 'success' ? (
+            <div className="rounded-lg bg-green-50 border border-green-200 p-8 text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </div>
+              <h2 className="mt-4 text-2xl font-bold text-gray-900">Registration Submitted!</h2>
+              <p className="mt-2 text-gray-600">
+                Thank you for registering with Bergen County Xpress. We'll review your application and contact you within 2-3 business days.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-8">
+              {/* Athlete Information */}
+              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Athlete Information</h2>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="athleteFirstName" className="block text-sm font-medium text-gray-700">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="athleteFirstName"
+                      name="athleteFirstName"
+                      required
+                      value={formData.athleteFirstName}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="athleteLastName" className="block text-sm font-medium text-gray-700">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="athleteLastName"
+                      name="athleteLastName"
+                      required
+                      value={formData.athleteLastName}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700">
+                      Date of Birth *
+                    </label>
+                    <input
+                      type="date"
+                      id="dateOfBirth"
+                      name="dateOfBirth"
+                      required
+                      value={formData.dateOfBirth}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
+                      Gender *
+                    </label>
+                    <select
+                      id="gender"
+                      name="gender"
+                      required
+                      value={formData.gender}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    >
+                      <option value="">Select...</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                      <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Parent/Guardian Information */}
+              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Parent/Guardian Information</h2>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="parentGuardianName" className="block text-sm font-medium text-gray-700">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="parentGuardianName"
+                      name="parentGuardianName"
+                      required
+                      value={formData.parentGuardianName}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                      Phone *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                    Address *
+                  </label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    required
+                    value={formData.address}
+                    onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                  />
+                </div>
+                <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                  <div>
+                    <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                      City *
+                    </label>
+                    <input
+                      type="text"
+                      id="city"
+                      name="city"
+                      required
+                      value={formData.city}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="state" className="block text-sm font-medium text-gray-700">
+                      State *
+                    </label>
+                    <input
+                      type="text"
+                      id="state"
+                      name="state"
+                      required
+                      value={formData.state}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="zipCode" className="block text-sm font-medium text-gray-700">
+                      ZIP Code *
+                    </label>
+                    <input
+                      type="text"
+                      id="zipCode"
+                      name="zipCode"
+                      required
+                      value={formData.zipCode}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Emergency Contact */}
+              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Emergency Contact</h2>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="emergencyContact" className="block text-sm font-medium text-gray-700">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="emergencyContact"
+                      name="emergencyContact"
+                      required
+                      value={formData.emergencyContact}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="emergencyPhone" className="block text-sm font-medium text-gray-700">
+                      Phone *
+                    </label>
+                    <input
+                      type="tel"
+                      id="emergencyPhone"
+                      name="emergencyPhone"
+                      required
+                      value={formData.emergencyPhone}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Program Selection */}
+              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Program Selection</h2>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="program" className="block text-sm font-medium text-gray-700">
+                      Program *
+                    </label>
+                    <select
+                      id="program"
+                      name="program"
+                      required
+                      value={formData.program}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    >
+                      <option value="">Select a program...</option>
+                      <option value="seasonal">Seasonal</option>
+                      <option value="annual">Annual</option>
+                      <option value="elite">Elite</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="experience" className="block text-sm font-medium text-gray-700">
+                      Experience Level *
+                    </label>
+                    <select
+                      id="experience"
+                      name="experience"
+                      required
+                      value={formData.experience}
+                      onChange={handleChange}
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    >
+                      <option value="">Select...</option>
+                      <option value="beginner">Beginner (No experience)</option>
+                      <option value="some">Some experience</option>
+                      <option value="experienced">Experienced</option>
+                      <option value="competitive">Competitive athlete</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Medical Information */}
+              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Medical Information</h2>
+                <div className="space-y-6">
+                  <div>
+                    <label htmlFor="medicalConditions" className="block text-sm font-medium text-gray-700">
+                      Medical Conditions
+                    </label>
+                    <textarea
+                      id="medicalConditions"
+                      name="medicalConditions"
+                      rows={3}
+                      value={formData.medicalConditions}
+                      onChange={handleChange}
+                      placeholder="Please list any medical conditions we should be aware of..."
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="medications" className="block text-sm font-medium text-gray-700">
+                      Current Medications
+                    </label>
+                    <textarea
+                      id="medications"
+                      name="medications"
+                      rows={2}
+                      value={formData.medications}
+                      onChange={handleChange}
+                      placeholder="List any medications..."
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="allergies" className="block text-sm font-medium text-gray-700">
+                      Allergies
+                    </label>
+                    <input
+                      type="text"
+                      id="allergies"
+                      name="allergies"
+                      value={formData.allergies}
+                      onChange={handleChange}
+                      placeholder="List any allergies..."
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                    />
+                  </div>
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="insuranceProvider" className="block text-sm font-medium text-gray-700">
+                        Insurance Provider
+                      </label>
+                      <input
+                        type="text"
+                        id="insuranceProvider"
+                        name="insuranceProvider"
+                        value={formData.insuranceProvider}
+                        onChange={handleChange}
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="insurancePolicyNumber" className="block text-sm font-medium text-gray-700">
+                        Policy Number
+                      </label>
+                      <input
+                        type="text"
+                        id="insurancePolicyNumber"
+                        name="insurancePolicyNumber"
+                        value={formData.insurancePolicyNumber}
+                        onChange={handleChange}
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Terms and Agreement */}
+              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <div className="flex items-start">
+                  <input
+                    id="agreeToTerms"
+                    name="agreeToTerms"
+                    type="checkbox"
+                    required
+                    checked={formData.agreeToTerms}
+                    onChange={handleChange}
+                    className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <label htmlFor="agreeToTerms" className="ml-3 text-sm text-gray-700">
+                    I agree to the terms and conditions, waiver of liability, and code of conduct. *
+                  </label>
+                </div>
+                <p className="mt-2 text-xs text-gray-500">
+                  By checking this box, you acknowledge that you have read and agree to our terms and conditions.
+                  A detailed waiver will be provided for signature at the first practice.
+                </p>
+              </div>
+
+              {/* Submit Button */}
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit Registration'}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}
