@@ -2,7 +2,10 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0b0b0f;
+  --bcx-red: #c8102e;
+  --bcx-red-dark: #9f0d24;
+  --bcx-black: #0b0b0f;
 }
 
 @theme inline {
@@ -15,6 +18,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
 }
 
 /* Smooth scrolling */
@@ -22,8 +26,95 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles for accessibility */
+/* Focus styles for accessibility - BCX Red */
 *:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #c8102e;
   outline-offset: 2px;
+}
+
+/* BCX Button Utilities */
+.bcx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: #c8102e;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.bcx-btn:hover {
+  background-color: #9f0d24;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.bcx-btn:focus {
+  outline: 2px solid #c8102e;
+  outline-offset: 2px;
+}
+
+.bcx-btn:active {
+  transform: translateY(0);
+}
+
+.bcx-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.bcx-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 2px solid #0b0b0f;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0b0b0f;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.bcx-btn-outline:hover {
+  background-color: #0b0b0f;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.bcx-btn-outline:focus {
+  outline: 2px solid #c8102e;
+  outline-offset: 2px;
+}
+
+.bcx-btn-outline:active {
+  transform: translateY(0);
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+h2 {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
 }

@@ -56,10 +56,10 @@ export default function Register() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Register for BCX</h1>
-          <p className="mt-4 text-xl text-blue-100">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Register for BCX</h1>
+          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
             Join Bergen County Xpress and start your track & field journey
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function Register() {
                       required
                       value={formData.athleteFirstName}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -111,7 +111,7 @@ export default function Register() {
                       required
                       value={formData.athleteLastName}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function Register() {
                       required
                       value={formData.dateOfBirth}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ export default function Register() {
                       required
                       value={formData.gender}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     >
                       <option value="">Select...</option>
                       <option value="male">Male</option>
@@ -165,7 +165,7 @@ export default function Register() {
                       required
                       value={formData.parentGuardianName}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -179,7 +179,7 @@ export default function Register() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export default function Register() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function Register() {
                     required
                     value={formData.address}
                     onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                   />
                 </div>
                 <div className="mt-6 grid gap-6 sm:grid-cols-3">
@@ -223,7 +223,7 @@ export default function Register() {
                       required
                       value={formData.city}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -237,7 +237,7 @@ export default function Register() {
                       required
                       value={formData.state}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -251,7 +251,7 @@ export default function Register() {
                       required
                       value={formData.zipCode}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                 </div>
@@ -272,7 +272,7 @@ export default function Register() {
                       required
                       value={formData.emergencyContact}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -286,7 +286,7 @@ export default function Register() {
                       required
                       value={formData.emergencyPhone}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function Register() {
                       required
                       value={formData.program}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     >
                       <option value="">Select a program...</option>
                       <option value="seasonal">Seasonal</option>
@@ -324,7 +324,7 @@ export default function Register() {
                       required
                       value={formData.experience}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     >
                       <option value="">Select...</option>
                       <option value="beginner">Beginner (No experience)</option>
@@ -351,7 +351,7 @@ export default function Register() {
                       value={formData.medicalConditions}
                       onChange={handleChange}
                       placeholder="Please list any medical conditions we should be aware of..."
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -365,7 +365,7 @@ export default function Register() {
                       value={formData.medications}
                       onChange={handleChange}
                       placeholder="List any medications..."
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div>
@@ -379,7 +379,7 @@ export default function Register() {
                       value={formData.allergies}
                       onChange={handleChange}
                       placeholder="List any allergies..."
-                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                     />
                   </div>
                   <div className="grid gap-6 sm:grid-cols-2">
@@ -393,7 +393,7 @@ export default function Register() {
                         name="insuranceProvider"
                         value={formData.insuranceProvider}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                       />
                     </div>
                     <div>
@@ -406,7 +406,7 @@ export default function Register() {
                         name="insurancePolicyNumber"
                         value={formData.insurancePolicyNumber}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-[#c8102e] focus:ring-1 focus:ring-[#c8102e] sm:text-sm transition-colors"
                       />
                     </div>
                   </div>
@@ -423,7 +423,7 @@ export default function Register() {
                     required
                     checked={formData.agreeToTerms}
                     onChange={handleChange}
-                    className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    className="h-4 w-4 rounded border-gray-300 text-[#c8102e] focus:ring-[#c8102e]"
                   />
                   <label htmlFor="agreeToTerms" className="ml-3 text-sm text-gray-700">
                     I agree to the terms and conditions, waiver of liability, and code of conduct. *
@@ -440,7 +440,7 @@ export default function Register() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bcx-btn disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Registration'}
                 </button>

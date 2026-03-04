@@ -50,10 +50,10 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-semibold transition-colors ${
+                className={`text-sm font-semibold transition-colors duration-200 ${
                   link.href === '/register'
-                    ? 'rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2'
-                    : 'text-gray-700 hover:text-red-600'
+                    ? 'rounded-lg bg-[#c8102e] px-4 py-2 text-white hover:bg-[#9f0d24] focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2'
+                    : 'text-gray-700 hover:text-[#c8102e]'
                 }`}
               >
                 {link.label}
@@ -64,7 +64,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#c8102e] transition-colors duration-200"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
@@ -112,10 +112,10 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block rounded-md px-3 py-2 text-base font-medium ${
+                className={`block rounded-md px-3 py-2 text-base font-medium transition-colors duration-200 ${
                   link.href === '/register'
-                    ? 'bg-red-600 text-white hover:bg-red-700'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-red-600'
+                    ? 'bg-[#c8102e] text-white hover:bg-[#9f0d24]'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-[#c8102e]'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

@@ -22,10 +22,10 @@ export default function Gallery() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Gallery</h1>
-          <p className="mt-4 text-xl text-blue-100">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Gallery</h1>
+          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
             Moments from our competitions, training, and team events
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function Gallery() {
             {galleryItems.map((item) => (
               <div
                 key={item.id}
-                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 shadow-md transition-transform hover:scale-105"
+                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c8102e]/10 to-[#c8102e]/20 shadow-md transition-transform hover:scale-105"
               >
                 {/* Placeholder for image - in production, use Next.js Image component */}
                 <div className="flex h-full items-center justify-center">
@@ -72,7 +72,7 @@ export default function Gallery() {
             <div className="mt-8">
               <a
                 href="/register"
-                className="inline-block rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="bcx-btn"
               >
                 Join the Team
               </a>

@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#c8102e] to-[#9f0d24] text-white">
                 <span className="text-lg font-bold">BCX</span>
               </div>
               <div>
@@ -65,7 +65,7 @@ export default function Footer() {
               <li className="pt-2">
                 <Link
                   href="/register"
-                  className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                  className="inline-block rounded-lg bg-[#c8102e] px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#9f0d24]"
                 >
                   Register Now
                 </Link>

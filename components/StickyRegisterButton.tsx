@@ -14,7 +14,7 @@ export default function StickyRegisterButton() {
   return (
     <Link
       href="/register"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full bg-[#c8102e] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:bg-[#9f0d24] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2"
       aria-label="Register for BCX"
     >
       <span className="hidden sm:inline">Register Now</span>

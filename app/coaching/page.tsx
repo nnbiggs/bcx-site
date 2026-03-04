@@ -52,10 +52,10 @@ export default function Coaching() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Coaching Staff</h1>
-          <p className="mt-4 text-xl text-blue-100">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Our Coaching Staff</h1>
+          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
             Experienced, certified coaches dedicated to your athlete's success
           </p>
         </div>
@@ -71,12 +71,12 @@ export default function Coaching() {
                 className="flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-4xl">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#c8102e]/10 text-4xl">
                     {coach.image}
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-gray-900">{coach.name}</h2>
-                    <p className="text-sm font-medium text-blue-600">{coach.role}</p>
+                    <h2 className="text-xl font-bold text-[#0b0b0f]">{coach.name}</h2>
+                    <p className="text-sm font-medium text-[#c8102e]">{coach.role}</p>
                   </div>
                 </div>
                 <p className="mt-4 text-sm text-gray-500">{coach.credentials}</p>
@@ -87,7 +87,7 @@ export default function Coaching() {
                     {coach.specialties.map((specialty) => (
                       <span
                         key={specialty}
-                        className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700"
+                        className="rounded-full bg-[#c8102e]/10 px-3 py-1 text-xs font-medium text-[#c8102e]"
                       >
                         {specialty}
                       </span>

@@ -48,10 +48,10 @@ export default function Program() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Programs</h1>
-          <p className="mt-4 text-xl text-blue-100">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Our Programs</h1>
+          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
             Comprehensive training programs designed to develop young athletes at every level
           </p>
         </div>
@@ -78,8 +78,8 @@ export default function Program() {
                     ))}
                   </ul>
                 </div>
-                <div className="mt-4 rounded-lg bg-blue-50 px-3 py-2">
-                  <p className="text-sm font-medium text-blue-900">{program.ageGroups}</p>
+                <div className="mt-4 rounded-lg bg-[#c8102e]/10 px-3 py-2">
+                  <p className="text-sm font-medium text-[#c8102e]">{program.ageGroups}</p>
                 </div>
               </div>
             ))}

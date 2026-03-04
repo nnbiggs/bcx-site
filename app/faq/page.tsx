@@ -59,10 +59,10 @@ export default function FAQ() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Frequently Asked Questions</h1>
-          <p className="mt-4 text-xl text-blue-100">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Frequently Asked Questions</h1>
+          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
             Everything you need to know about Bergen County Xpress
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function FAQ() {
               >
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                  className="flex w-full items-center justify-between px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-inset transition-colors"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   aria-expanded={openIndex === index}
                 >
@@ -120,13 +120,13 @@ export default function FAQ() {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="mailto:info@bergencountyxpress.com"
-                className="rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="bcx-btn"
               >
                 Email Us
               </a>
               <a
                 href="tel:+12015551234"
-                className="rounded-lg border-2 border-gray-900 px-8 py-3 text-base font-semibold text-gray-900 transition-all hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="bcx-btn-outline"
               >
                 Call Us
               </a>
