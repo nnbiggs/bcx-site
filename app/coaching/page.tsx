@@ -8,45 +8,38 @@ export const metadata: Metadata = {
 export default function Coaching() {
   const coaches = [
     {
-      name: 'Coach Michael Johnson',
-      role: 'Head Coach & Program Director',
-      credentials: 'USATF Level 2, IAAF Certified',
-      specialties: ['Sprints', 'Hurdles', 'Program Development'],
-      bio: 'With over 15 years of coaching experience, Coach Johnson has developed numerous state champions and college athletes. He holds a degree in Exercise Science and is passionate about youth development.',
+      name: 'Phil Hogan',
+      role: 'Head Coach',
+      credentials: 'USATF Certified Level 1 & Level 2 Throws Coach',
+      specialties: ['Shot Put', 'Discus', 'Javelin', 'Meet Entries', 'Practice Scheduling'],
+      bio: 'Phil is entering his 11th season as Head Coach and co-founder of Bergen Xpress. He specializes in throwing events, including shot, discus and javelin, and oversees track meet entries and practice scheduling.',
+      contact: 'Contact Coach Phil',
       image: '👨‍🏫',
     },
     {
-      name: 'Coach Sarah Martinez',
-      role: 'Distance Coach',
-      credentials: 'USATF Level 2, RRCA Certified',
-      specialties: ['Distance Running', 'Cross Country', 'Endurance Training'],
-      bio: 'Coach Martinez is a former collegiate runner with 10+ years of coaching experience. She specializes in developing aerobic capacity and race strategy for middle and long distance events.',
+      name: 'Michele Hogan',
+      role: 'Team Admin and People Coach',
+      credentials: 'Co-founder',
+      specialties: ['Registration', 'Logistics', 'Team Finances', 'Parent & Staff Coaching'],
+      bio: 'Michele is entering her 11th season as a co-founder of Bergen Xpress. She oversees all registration, logistics and team financial activities. She coaches the parents and the BCX coaching staff.',
+      contact: 'Contact Michele',
       image: '👩‍🏫',
     },
     {
-      name: 'Coach David Chen',
-      role: 'Jumps & Multi-Events Coach',
-      credentials: 'USATF Level 2, USTFCCCA Certified',
-      specialties: ['Long Jump', 'High Jump', 'Triple Jump', 'Pole Vault', 'Multi-Events'],
-      bio: 'A former Division I athlete, Coach Chen brings technical expertise and innovative training methods to our jumps program. He has coached multiple state qualifiers in jumping events.',
+      name: 'Rob Douglas',
+      role: 'Assistant Coach',
+      credentials: 'Former NFL – New York Giants',
+      specialties: ['Football background', 'Athletic development'],
+      bio: 'Coach Rob is a former professional football player for the New York Giants. Born and raised in St. Louis, Missouri, he was an All State football player and State Football Champion. He attended the University of Memphis and played football for the Tigers from 2001–2005. Coach Rob was acquired by the New York Giants and played with the Giants from 2006–2008.',
+      contact: '',
       image: '👨‍🏫',
     },
-    {
-      name: 'Coach Jennifer Williams',
-      role: 'Throws Coach',
-      credentials: 'USATF Level 2',
-      specialties: ['Shot Put', 'Discus', 'Javelin', 'Hammer Throw'],
-      bio: 'Coach Williams is a strength and conditioning specialist with extensive experience in throws events. She focuses on technique refinement and power development.',
-      image: '👩‍🏫',
-    },
-    {
-      name: 'Coach Robert Taylor',
-      role: 'Assistant Coach & Youth Development',
-      credentials: 'USATF Level 1',
-      specialties: ['Beginner Programs', 'Fundamentals', 'Youth Development'],
-      bio: 'Coach Taylor specializes in introducing young athletes to track and field. His patient, encouraging approach helps beginners build confidence and discover their passion for the sport.',
-      image: '👨‍🏫',
-    },
+    { name: 'Coach Rob A.', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👨‍🏫' },
+    { name: 'Coach Obed', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👨‍🏫' },
+    { name: 'Coach Shalanda', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👩‍🏫' },
+    { name: 'Coach Marion', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👩‍🏫' },
+    { name: 'Coach Alicia', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👩‍🏫' },
+    { name: 'Coach Kertis', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👨‍🏫' },
   ];
 
   return (
@@ -54,9 +47,12 @@ export default function Coaching() {
       {/* Header */}
       <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Our Coaching Staff</h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Coaching Staff</h1>
           <p className="mt-6 text-xl text-red-50 sm:text-2xl">
             Experienced, certified coaches dedicated to your athlete's success
+          </p>
+          <p className="mt-4 text-base text-red-100/90">
+            Bergen Xpress staff has passed NCSI criminal background checks.
           </p>
         </div>
       </section>
@@ -71,29 +67,38 @@ export default function Coaching() {
                 className="flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#c8102e]/10 text-4xl">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#c8102e]/10 text-4xl">
                     {coach.image}
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h2 className="text-xl font-bold text-[#0b0b0f]">{coach.name}</h2>
                     <p className="text-sm font-medium text-[#c8102e]">{coach.role}</p>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-gray-500">{coach.credentials}</p>
-                <p className="mt-4 text-gray-600">{coach.bio}</p>
-                <div className="mt-4">
-                  <h3 className="text-sm font-semibold text-gray-900">Specialties</h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {coach.specialties.map((specialty) => (
-                      <span
-                        key={specialty}
-                        className="rounded-full bg-[#c8102e]/10 px-3 py-1 text-xs font-medium text-[#c8102e]"
-                      >
-                        {specialty}
-                      </span>
-                    ))}
+                {coach.credentials && (
+                  <p className="mt-4 text-sm text-gray-500">{coach.credentials}</p>
+                )}
+                {coach.bio && (
+                  <p className="mt-4 text-gray-600">{coach.bio}</p>
+                )}
+                {coach.contact && (
+                  <p className="mt-2 text-sm font-medium text-[#c8102e]">{coach.contact}</p>
+                )}
+                {coach.specialties.length > 0 && (
+                  <div className="mt-4">
+                    <h3 className="text-sm font-semibold text-gray-900">Specialties</h3>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {coach.specialties.map((specialty) => (
+                        <span
+                          key={specialty}
+                          className="rounded-full bg-[#c8102e]/10 px-3 py-1 text-xs font-medium text-[#c8102e]"
+                        >
+                          {specialty}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
