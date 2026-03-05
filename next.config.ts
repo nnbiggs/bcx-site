@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "bergenxpress.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+        pathname: "/**",
+      },
     ],
   },
 };

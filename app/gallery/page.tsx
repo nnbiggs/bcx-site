@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description: 'View photos and highlights from Bergen County Xpress track and field meets, training sessions, and team events.',
 };
 
-// Photos from Bergen Xpress Pictures page (https://bergenxpress.com/?page_id=211)
-// WordPress typically serves uploads from /wp-content/uploads/YEAR/MONTH/
+// Pictures from Bergen Xpress (https://bergenxpress.com/?page_id=211): IMG_1592, IMG_1589, IMG_1590, 20150608_195255
+// Hosted locally in public/gallery/. Replace these files with the real BCX photos if you get them from NJSportsPhotography or the club.
 const GALLERY_IMAGES = [
-  { id: 1, category: 'BCX', title: 'IMG_1592', description: 'Bergen Xpress track and field', src: 'https://bergenxpress.com/wp-content/uploads/2015/06/IMG_1592.jpg' },
-  { id: 2, category: 'BCX', title: 'IMG_1589', description: 'Bergen Xpress track and field', src: 'https://bergenxpress.com/wp-content/uploads/2015/06/IMG_1589.jpg' },
-  { id: 3, category: 'BCX', title: 'IMG_1590', description: 'Bergen Xpress track and field', src: 'https://bergenxpress.com/wp-content/uploads/2015/06/IMG_1590.jpg' },
-  { id: 4, category: 'BCX', title: 'June 8, 2015', description: '20150608_195255 - Meet highlights', src: 'https://bergenxpress.com/wp-content/uploads/2015/06/20150608_195255.jpg' },
+  { id: 1, category: 'BCX', title: 'IMG_1592', description: 'Bergen Xpress track and field', src: '/gallery/IMG_1592.jpg' },
+  { id: 2, category: 'BCX', title: 'IMG_1589', description: 'Bergen Xpress track and field', src: '/gallery/IMG_1589.jpg' },
+  { id: 3, category: 'BCX', title: 'IMG_1590', description: 'Bergen Xpress track and field', src: '/gallery/IMG_1590.jpg' },
+  { id: 4, category: 'BCX', title: 'June 8, 2015', description: '20150608_195255 – Meet highlights', src: '/gallery/20150608_195255.jpg' },
 ];
 
 // Fallback placeholder items when external images aren't available or for variety
