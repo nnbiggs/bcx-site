@@ -34,12 +34,21 @@ export default function Coaching() {
       contact: '',
       image: '👨‍🏫',
     },
-    { name: 'Coach Rob A.', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👨‍🏫' },
-    { name: 'Coach Obed', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👨‍🏫' },
+    {
+      name: 'Coach Biggs',
+      role: 'Hurdles and Sprint Coach',
+      credentials: '',
+      specialties: ['Hurdles', 'Sprints'],
+      bio: '',
+      contact: '',
+      image: '👨‍🏫',
+    },
+    { name: 'Coach Rob A.', role: 'Middle and Long Distance Coach', credentials: '', specialties: ['Middle Distance', 'Long Distance'], bio: '', contact: '', image: '👨‍🏫' },
+    { name: 'Coach Obed', role: '9–11 Year Old Sprints', credentials: '', specialties: ['Sprints', 'Ages 9–11'], bio: '', contact: '', image: '👨‍🏫' },
     { name: 'Coach Shalanda', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👩‍🏫' },
-    { name: 'Coach Marion', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👩‍🏫' },
+    { name: 'Coach Marlon', role: '9 and Under', credentials: '', specialties: ['Ages 9 & Under'], bio: '', contact: '', image: '👨‍🏫' },
     { name: 'Coach Alicia', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👩‍🏫' },
-    { name: 'Coach Kertis', role: 'Assistant Coach', credentials: '', specialties: [], bio: '', contact: '', image: '👨‍🏫' },
+    { name: 'Coach Kertis', role: '11–14 Elite Sprints', credentials: '', specialties: ['Elite Sprints', 'Ages 11–14'], bio: '', contact: '', image: '👨‍🏫' },
   ];
 
   return (
