@@ -89,7 +89,7 @@ const coaches = [
     specialties: ['Elite Sprints', 'Ages 11–13'],
     bio: '',
     contact: '',
-    image: '/images/coaches/coach-alicia.png',
+    image: '👩‍🏫',
   },
   {
     name: 'Coach Kertis',
