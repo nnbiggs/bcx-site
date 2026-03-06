@@ -9,31 +9,45 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+      {/* Hero Section — What BCX is, who it's for, primary CTA */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle accent for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-5xl font-bold tracking-tight text-[#0b0b0f] sm:text-6xl lg:text-7xl">
-              Run <span className="text-[#c8102e]">Fast</span>. Jump <span className="text-[#c8102e]">High</span>. Throw <span className="text-[#c8102e]">Far</span>.
-            </h1>
-            <p className="mt-8 text-lg leading-8 text-gray-700 sm:text-xl lg:text-2xl max-w-2xl mx-auto">
-              Join Bergen County Xpress and unlock your athletic potential. Expert coaching, 
-              comprehensive training, and a supportive community for young track & field athletes.
+            {/* Who it's for — badge */}
+            <p className="inline-flex items-center rounded-full bg-[#c8102e]/10 px-4 py-1.5 text-sm font-semibold text-[#c8102e] ring-1 ring-[#c8102e]/20">
+              For youth athletes ages 6–18 in Bergen County
             </p>
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+
+            {/* What BCX is — clear headline */}
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-[#0b0b0f] sm:text-5xl lg:text-6xl">
+              <span className="text-[#c8102e]">Bergen County Xpress</span> is your premier youth track & field club.
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-700 sm:text-xl lg:text-2xl max-w-2xl mx-auto">
+              Expert coaching, full-event training, and a supportive team—so every young athlete can run fast, jump high, and throw far.
+            </p>
+
+            {/* Primary CTA — one clear action */}
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href="/register"
-                className="bcx-btn"
+                className="bcx-btn w-full sm:w-auto min-w-[200px] text-lg px-8 py-4 shadow-lg hover:shadow-xl"
               >
-                Register Now
+                Register for the 2026 Season
               </Link>
               <Link
                 href="/program"
-                className="bcx-btn-outline"
+                className="text-[#0b0b0f] font-medium underline underline-offset-4 hover:text-[#c8102e] transition-colors"
               >
-                Learn More
+                See program details →
               </Link>
             </div>
+
+            {/* Trust / urgency line */}
+            <p className="mt-8 text-sm text-gray-500">
+              First practice <span className="font-semibold text-gray-700">Sunday, March 8</span> at Teaneck High School
+            </p>
           </div>
         </div>
       </section>
@@ -240,17 +254,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Ready to Get Started?
+              Ready to join BCX?
             </h2>
             <p className="mt-6 text-xl text-gray-300">
-              Join BCX today and take the first step toward achieving your track & field goals.
+              Register for the 2026 season and take the first step toward your track & field goals.
             </p>
             <div className="mt-10">
               <Link
                 href="/register"
-                className="bcx-btn"
+                className="bcx-btn text-lg px-8 py-4"
               >
-                Register Now
+                Register for the 2026 Season
               </Link>
             </div>
           </div>
