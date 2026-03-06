@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Bergen County Xpress",
     title: "Bergen County Xpress | Youth Track & Field Club",
-    description: "Premier youth track and field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 6–18.",
+    description: "Premier youth track and field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 13–18.",
   },
   twitter: {
     card: "summary_large_image",

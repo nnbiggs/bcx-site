@@ -3,7 +3,7 @@ import { PageHero, RegisterCTA } from '@/components/sections';
 
 export const metadata: Metadata = {
   title: 'Program',
-  description: 'Explore BCX track and field programs: sprints, distance, jumps, throws, and multi-events for ages 6–18. Comprehensive training for every skill level.',
+  description: 'Explore BCX track and field programs: sprints, distance, jumps, throws, and multi-events for ages 13–18. Comprehensive training for every skill level.',
   openGraph: {
     title: 'Program | Bergen County Xpress',
     description: 'Comprehensive track and field programs for youth athletes. Sprints, distance, jumps, throws, and multi-events for all skill levels.',
@@ -23,37 +23,37 @@ export default function Program() {
       name: 'Sprints & Hurdles',
       description: 'Develop explosive speed and technique in 100m, 200m, 400m, and hurdle events.',
       events: ['100m', '200m', '400m', '100m/110m Hurdles', '300m Hurdles'],
-      ageGroups: 'Ages 8-18',
+      ageGroups: 'Ages 13-18',
     },
     {
       name: 'Distance Running',
       description: 'Build endurance and race strategy for middle and long distance events.',
       events: ['800m', '1500m', '3000m', 'Cross Country'],
-      ageGroups: 'Ages 10-18',
+      ageGroups: 'Ages 13-18',
     },
     {
       name: 'Jumping Events',
       description: 'Master the techniques of long jump, high jump, triple jump, and pole vault.',
       events: ['Long Jump', 'High Jump', 'Triple Jump', 'Pole Vault'],
-      ageGroups: 'Ages 8-18',
+      ageGroups: 'Ages 13-18',
     },
     {
       name: 'Throwing Events',
       description: 'Develop power and technique in shot put, discus, javelin, and hammer throw.',
       events: ['Shot Put', 'Discus', 'Javelin', 'Hammer Throw'],
-      ageGroups: 'Ages 10-18',
+      ageGroups: 'Ages 13-18',
     },
     {
       name: 'Multi-Events',
       description: 'Compete in pentathlon, heptathlon, and decathlon for well-rounded athletes.',
       events: ['Pentathlon', 'Heptathlon', 'Decathlon'],
-      ageGroups: 'Ages 12-18',
+      ageGroups: 'Ages 13-18',
     },
     {
       name: 'Beginner Program',
-      description: 'Introduction to track and field for young athletes exploring different events.',
-      events: ['All Events', 'Fundamentals', 'Fun & Games'],
-      ageGroups: 'Ages 6-10',
+      description: 'Introduction to track and field for athletes new to the sport exploring different events.',
+      events: ['All Events', 'Fundamentals', 'Skill Development'],
+      ageGroups: 'Ages 13-15',
     },
   ];
 
