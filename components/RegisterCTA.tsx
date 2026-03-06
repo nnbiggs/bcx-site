@@ -15,24 +15,24 @@ export default function RegisterCTA({
 }: RegisterCTAProps) {
   return (
     <section
-      className={`bg-[#0b0b0f] py-14 sm:py-20 lg:py-24 ${className}`}
+      className={`bg-[#0b0b0f] section-wide ${className}`}
       aria-labelledby="register-cta-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center min-w-0 px-1 sm:px-0">
+        <div className="mx-auto max-w-2xl text-center min-w-0">
           <h2
             id="register-cta-heading"
-            className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl break-words"
+            className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl break-words"
           >
             {headline}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-300 sm:mt-6 sm:text-lg lg:text-xl break-words">
+          <p className="mt-4 text-base leading-relaxed text-gray-400 sm:mt-5 sm:text-lg break-words">
             {supportingCopy}
           </p>
-          <div className="mt-8 sm:mt-10">
+          <div className="mt-8">
             <Link
               href="/register"
-              className="bcx-btn inline-flex w-full min-h-[48px] items-center justify-center text-base font-semibold px-6 py-3.5 sm:w-auto sm:min-h-0 sm:text-lg sm:px-8 sm:py-4 shadow-lg hover:shadow-xl"
+              className="bcx-btn inline-flex w-full min-h-[48px] items-center justify-center text-base font-semibold px-6 py-3.5 sm:w-auto sm:min-h-0 sm:px-8 sm:py-4"
             >
               {buttonText}
             </Link>

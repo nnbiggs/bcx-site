@@ -1,11 +1,21 @@
 @import "tailwindcss";
 
+/* ---------------------------------------------------------------------------
+   Design tokens – keep brand identity, improve balance
+   --------------------------------------------------------------------------- */
 :root {
   --background: #ffffff;
   --foreground: #0b0b0f;
   --bcx-red: #c8102e;
   --bcx-red-dark: #9f0d24;
+  --bcx-red-muted: rgba(200, 16, 46, 0.08);
   --bcx-black: #0b0b0f;
+  /* Neutral grays – consistent hierarchy */
+  --gray-body: #374151;
+  --gray-muted: #6b7280;
+  --gray-subtle: #9ca3af;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
 }
 
 @theme inline {
@@ -14,13 +24,23 @@
   --font-sans: var(--font-inter);
 }
 
+/* ---------------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
   line-height: 1.6;
+  letter-spacing: 0.01em;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(200, 16, 46, 0.15);
+  -webkit-tap-highlight-color: rgba(200, 16, 46, 0.12);
   overflow-x: hidden;
 }
 
@@ -30,31 +50,219 @@ body {
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles for accessibility - BCX Red */
+/* Focus – BCX brand */
 *:focus-visible {
-  outline: 2px solid #c8102e;
+  outline: 2px solid var(--bcx-red);
   outline-offset: 2px;
 }
 
-/* BCX Button Utilities - 44px min height for touch targets on mobile */
+/* ---------------------------------------------------------------------------
+   Typography – modern hierarchy
+   --------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--bcx-black);
+}
+
+h1 {
+  font-size: clamp(1.875rem, 4.5vw + 1rem, 3.5rem);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
+}
+
+/* Section headings – consistent pattern */
+.section-head {
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-head {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-head {
+    margin-bottom: 4rem;
+  }
+}
+
+.section-head h2 {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head p {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-body);
+}
+
+@media (min-width: 640px) {
+  .section-head p {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Section spacing – consistent rhythm
+   --------------------------------------------------------------------------- */
+.section-tight {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-tight {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-tight {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.section-wide {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-wide {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-wide {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Page hero (red gradient) */
+.hero-page {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .hero-page {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-page {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* Container */
+.container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Cards – consistent styling
+   --------------------------------------------------------------------------- */
+.card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  border-color: var(--border-strong);
+}
+
+.card-padding {
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .card-padding {
+    padding: 2rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   BCX Buttons – 44px min height for touch targets
+   --------------------------------------------------------------------------- */
 .bcx-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  background-color: #c8102e;
+  background-color: var(--bcx-red);
   padding: 0.75rem 1.5rem;
   min-height: 2.75rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   border: none;
   cursor: pointer;
 }
@@ -67,13 +275,13 @@ html {
 }
 
 .bcx-btn:hover {
-  background-color: #9f0d24;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: var(--bcx-red-dark);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
   transform: translateY(-1px);
 }
 
 .bcx-btn:focus {
-  outline: 2px solid #c8102e;
+  outline: 2px solid var(--bcx-red);
   outline-offset: 2px;
 }
 
@@ -93,13 +301,14 @@ html {
   justify-content: center;
   border-radius: 0.5rem;
   background-color: transparent;
-  border: 2px solid #0b0b0f;
+  border: 2px solid var(--bcx-black);
   padding: 0.75rem 1.5rem;
   min-height: 2.75rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #0b0b0f;
-  transition: all 0.2s ease-in-out;
+  color: var(--bcx-black);
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
@@ -111,13 +320,13 @@ html {
 }
 
 .bcx-btn-outline:hover {
-  background-color: #0b0b0f;
+  background-color: var(--bcx-black);
   color: white;
   transform: translateY(-1px);
 }
 
 .bcx-btn-outline:focus {
-  outline: 2px solid #c8102e;
+  outline: 2px solid var(--bcx-red);
   outline-offset: 2px;
 }
 
@@ -125,31 +334,9 @@ html {
   transform: translateY(0);
 }
 
-/* Typography improvements - responsive with minimum readable sizes */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
-}
-
-h3 {
-  font-size: clamp(1.25rem, 3vw + 0.25rem, 1.875rem);
-}
-
-/* Prevent horizontal overflow on small screens */
-html {
-  overflow-x: hidden;
-}
-
-/* Safe area for notched devices (sticky/fixed elements) */
+/* ---------------------------------------------------------------------------
+   Safe area for notched devices
+   --------------------------------------------------------------------------- */
 @supports (padding: env(safe-area-inset-bottom)) {
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom);

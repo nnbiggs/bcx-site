@@ -21,30 +21,24 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero Section — What BCX is, who it's for, primary CTA */}
+      {/* Hero Section */}
       <section className="relative bg-white overflow-hidden">
-        {/* Subtle accent for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/60 to-white pointer-events-none" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-4xl text-center min-w-0">
-            {/* Who it's for — badge */}
-            <p className="inline-flex items-center rounded-full bg-[#c8102e]/10 px-3 py-1.5 text-xs font-semibold text-[#c8102e] ring-1 ring-[#c8102e]/20 sm:px-4 sm:text-sm text-center max-w-[90vw] sm:max-w-none">
+            <p className="inline-flex items-center rounded-full bg-[#c8102e]/10 px-3.5 py-1.5 text-xs font-semibold text-[#c8102e] ring-1 ring-[#c8102e]/20 sm:px-4 sm:text-sm">
               For youth athletes ages 6–18 in Bergen County
             </p>
-
-            {/* What BCX is — clear headline */}
-            <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#0b0b0f] sm:mt-6 sm:text-4xl sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-3xl font-bold tracking-tight text-[#0b0b0f] sm:mt-6 sm:text-4xl sm:text-5xl lg:text-6xl">
               <span className="text-[#c8102e]">Bergen County Xpress</span> is your premier youth track & field club.
             </h1>
-            <p className="mt-4 text-base leading-7 text-gray-700 sm:mt-6 sm:text-lg sm:leading-8 lg:text-xl lg:text-2xl max-w-2xl mx-auto">
+            <p className="mt-4 text-base leading-relaxed text-gray-600 sm:mt-6 sm:text-lg lg:text-xl max-w-2xl mx-auto">
               Expert coaching, full-event training, and a supportive team—so every young athlete can run fast, jump high, and throw far.
             </p>
-
-            {/* Primary CTA — one clear action */}
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row sm:gap-6">
               <Link
                 href="/register"
-                className="bcx-btn w-full sm:w-auto min-w-[200px] text-base sm:text-lg px-6 py-3.5 sm:px-8 sm:py-4 shadow-lg hover:shadow-xl"
+                className="bcx-btn w-full sm:w-auto min-w-[200px] text-base sm:text-lg px-6 py-3.5 sm:px-8 sm:py-4"
               >
                 Register for the 2026 Season
               </Link>
@@ -55,9 +49,7 @@ export default function Home() {
                 See program details →
               </Link>
             </div>
-
-            {/* Trust / urgency line */}
-            <p className="mt-6 text-xs text-gray-500 sm:mt-8 sm:text-sm">
+            <p className="mt-6 text-sm text-gray-500 sm:mt-8">
               First practice <span className="font-semibold text-gray-700">Sunday, March 8</span> at Teaneck High School
             </p>
           </div>
@@ -65,41 +57,41 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-14 sm:py-28 lg:py-32">
+      <section className="section bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-[#0b0b0f] sm:text-4xl sm:text-5xl">
+          <div className="section-head text-center">
+            <h2 className="text-2xl font-bold tracking-tight text-[#0b0b0f] sm:text-3xl lg:text-4xl">
               Why Choose <span className="text-[#c8102e]">BCX</span>?
             </h2>
-            <p className="mt-4 text-lg text-gray-700 sm:mt-6 sm:text-xl">
+            <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-lg">
               We provide the training, support, and opportunities young athletes need to excel.
             </p>
           </div>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            <div className="flex flex-col rounded-2xl bg-gray-50 p-6 transition-shadow hover:shadow-lg sm:p-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-[#c8102e] text-white">
+            <div className="card card-padding flex flex-col">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#c8102e] text-white">
                 <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443a55.381 55.381 0 015.25 2.882V15" />
                 </svg>
               </div>
-              <h3 className="mt-6 text-lg font-bold text-[#0b0b0f] sm:text-xl">Expert Coaching</h3>
-              <p className="mt-3 text-sm leading-6 text-gray-700 sm:text-base sm:leading-7">
+              <h3 className="mt-5 text-lg font-bold text-[#0b0b0f] sm:text-xl">Expert Coaching</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base">
                 Certified coaches with years of experience developing young athletes and preparing them for competition.
               </p>
             </div>
-            <div className="flex flex-col rounded-2xl bg-gray-50 p-6 transition-shadow hover:shadow-lg sm:p-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-[#c8102e] text-white">
-                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+            <div className="card card-padding flex flex-col">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#c8102e] text-white">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15m5 0v18a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 21V3m3.75 4.5v10.5m0 0h7.5m-7.5 0H9m3.75-13.5v10.5m0-10.5h7.5m-7.5 0H15M9 7.5h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 0H15m-1.5 0h1.5m-1.5 3H15m-1.5 0H15m-1.5 0h1.5" />
                 </svg>
               </div>
-              <h3 className="mt-6 text-lg font-bold text-[#0b0b0f] sm:text-xl">Comprehensive Training</h3>
-              <p className="mt-3 text-sm leading-6 text-gray-700 sm:text-base sm:leading-7">
+              <h3 className="mt-5 text-lg font-bold text-[#0b0b0f] sm:text-xl">Comprehensive Training</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base">
                 Full spectrum programs covering sprints, distance, jumps, throws, and multi-events for all skill levels.
               </p>
             </div>
-            <div className="flex flex-col rounded-2xl bg-gray-50 p-6 transition-shadow hover:shadow-lg sm:p-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-[#c8102e] text-white">
+            <div className="card card-padding flex flex-col">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#c8102e] text-white">
                 <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.645-5.963-1.88A6.979 6.979 0 017.5 15.25M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -109,6 +101,87 @@ export default function Home() {
                 Join a team of dedicated athletes, supportive families, and coaches who celebrate every achievement.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Achievements — Meet results */}
+      <section className="bg-gray-50 py-14 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0b0b0f] sm:text-4xl sm:text-5xl">
+              Recent <span className="text-[#c8102e]">Achievements</span>
+            </h2>
+            <p className="mt-4 text-lg text-gray-700 sm:mt-6 sm:text-xl">
+              Meet results and highlights from the track
+            </p>
+          </div>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 min-w-0">
+            <article className="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden transition-all duration-200 hover:shadow-lg hover:border-[#c8102e]/20">
+              <div className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] px-5 py-3 sm:px-6 sm:py-4">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white" aria-hidden>
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                  </span>
+                  <div>
+                    <h3 className="text-base font-bold text-white sm:text-lg">AAU Junior Olympics</h3>
+                    <p className="text-xs text-red-100 sm:text-sm">July 2025 · Greensboro, NC</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <p className="text-sm font-semibold text-[#c8102e]">Team highlights</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> Multiple BCX athletes qualified for nationals</li>
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> Medals in sprints, hurdles, and throws</li>
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> Strong showing in 9–10 and 11–12 age groups</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden transition-all duration-200 hover:shadow-lg hover:border-[#c8102e]/20">
+              <div className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] px-5 py-3 sm:px-6 sm:py-4">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white" aria-hidden>
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                  </span>
+                  <div>
+                    <h3 className="text-base font-bold text-white sm:text-lg">USATF New Jersey Open</h3>
+                    <p className="text-xs text-red-100 sm:text-sm">June 2025 · Franklin Township</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <p className="text-sm font-semibold text-[#c8102e]">Top results</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> 1st place — Girls 11–12 100m</li>
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> 2nd place — Boys 13–14 400m</li>
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> 1st place — Shot put, 9–10 division</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="group flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden transition-all duration-200 hover:shadow-lg hover:border-[#c8102e]/20">
+              <div className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] px-5 py-3 sm:px-6 sm:py-4">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white" aria-hidden>
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                  </span>
+                  <div>
+                    <h3 className="text-base font-bold text-white sm:text-lg">Icahn Stadium Invitational</h3>
+                    <p className="text-xs text-red-100 sm:text-sm">April 2025 · New York, NY</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <p className="text-sm font-semibold text-[#c8102e]">Meet highlights</p>
+                <ul className="mt-2 space-y-1.5 text-sm text-gray-700">
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> 12 BCX athletes competed across events</li>
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> Several new personal bests</li>
+                  <li className="flex items-start gap-2"><span className="text-[#c8102e] shrink-0">•</span> 3rd place team relay — 4×100m</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>

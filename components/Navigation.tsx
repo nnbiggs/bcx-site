@@ -32,11 +32,11 @@ export default function Navigation() {
 
   return (
     <nav
-      className="sticky top-0 z-50 bg-white shadow-md safe-area-inset-top"
+      className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 safe-area-inset-top"
       aria-label="Main navigation"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 min-h-[64px] sm:h-20 items-center justify-between gap-2">
+        <div className="flex h-16 min-h-[64px] sm:h-[4.5rem] items-center justify-between gap-2">
           {/* Logo - always first for focus order */}
           <Link
             href="/"
@@ -54,8 +54,8 @@ export default function Navigation() {
               />
             </div>
             <div className="hidden sm:block">
-              <span className="text-xl font-bold text-gray-900">Bergen County Xpress</span>
-              <span className="block text-xs text-gray-600">Track & Field Club</span>
+              <span className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">Bergen County Xpress</span>
+              <span className="block text-xs text-gray-500 sm:text-sm">Track & Field Club</span>
             </div>
           </Link>
 
@@ -66,7 +66,7 @@ export default function Navigation() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-[#c8102e] focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-inset transition-colors"
+                    className="rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-[#c8102e] focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-inset transition-colors"
                   >
                     {link.label}
                   </Link>
