@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero, RegisterCTA } from '@/components/sections';
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ const coaches = [
     specialties: ['Shot Put', 'Discus', 'Javelin', 'Meet Entries', 'Practice Scheduling'],
     bio: 'Phil is entering his 11th season as Head Coach and co-founder of Bergen Xpress. He specializes in throwing events, including shot, discus and javelin, and oversees track meet entries and practice scheduling.',
     contact: 'Contact Coach Phil',
-    image: '👨‍🏫',
+    image: '/images/coaches/phil-hogan.png',
   },
   {
     name: 'Michele Hogan',
@@ -34,7 +35,7 @@ const coaches = [
     specialties: ['Registration', 'Logistics', 'Team Finances', 'Parent & Staff Coaching'],
     bio: 'Michele is entering her 11th season as a co-founder of Bergen Xpress. She oversees all registration, logistics and team financial activities. She coaches the parents and the BCX coaching staff.',
     contact: 'Contact Michele',
-    image: '👩‍🏫',
+    image: '/images/coaches/michele-hogan.png',
   },
   {
     name: 'Rob Douglas',
@@ -43,7 +44,7 @@ const coaches = [
     specialties: ['Football background', 'Athletic development'],
     bio: 'Coach Rob is a former professional football player for the New York Giants. Born and raised in St. Louis, Missouri, he was an All State football player and State Football Champion. He attended the University of Memphis and played football for the Tigers from 2001–2005. Coach Rob was acquired by the New York Giants and played with the Giants from 2006–2008.',
     contact: '',
-    image: '👨‍🏫',
+    image: '/images/coaches/rob-douglas.png',
   },
   {
     name: 'Coach Biggs',
@@ -61,7 +62,7 @@ const coaches = [
     specialties: ['Middle Distance', 'Long Distance'],
     bio: '',
     contact: '',
-    image: '👨‍🏫',
+    image: '/images/coaches/coach-rob-a.png',
   },
   {
     name: 'Coach Obed',
@@ -70,7 +71,7 @@ const coaches = [
     specialties: ['Sprints', 'Ages 9–11'],
     bio: '',
     contact: '',
-    image: '👨‍🏫',
+    image: '/images/coaches/coach-obed.png',
   },
   {
     name: 'Coach Shalanda',
@@ -79,7 +80,25 @@ const coaches = [
     specialties: [],
     bio: '',
     contact: '',
-    image: '👩‍🏫',
+    image: '/images/coaches/coach-shalanda.png',
+  },
+  {
+    name: 'Coach Alicia',
+    role: '11–13 Elite Sprints',
+    credentials: '',
+    specialties: ['Elite Sprints', 'Ages 11–13'],
+    bio: '',
+    contact: '',
+    image: '/images/coaches/coach-alicia.png',
+  },
+  {
+    name: 'Coach Kertis',
+    role: 'Assistant Coach',
+    credentials: '',
+    specialties: [],
+    bio: '',
+    contact: '',
+    image: '/images/coaches/coach-alicia.png',
   },
   {
     name: 'Coach Marlon',
@@ -88,25 +107,7 @@ const coaches = [
     specialties: ['Ages 9 & Under'],
     bio: '',
     contact: '',
-    image: '👨‍🏫',
-  },
-  {
-    name: 'Coach Alicia',
-    role: 'Assistant Coach',
-    credentials: '',
-    specialties: [],
-    bio: '',
-    contact: '',
-    image: '👩‍🏫',
-  },
-  {
-    name: 'Coach Kertis',
-    role: '11–13 Elite Sprints',
-    credentials: '',
-    specialties: ['Elite Sprints', 'Ages 11–13'],
-    bio: '',
-    contact: '',
-    image: '👨‍🏫',
+    image: '/images/coaches/coach-marlon.png',
   },
 ];
 
@@ -151,10 +152,20 @@ function CoachCard({
       {/* Header: avatar + name/role */}
       <header className="flex items-start gap-4">
         <div
-          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#c8102e]/10 text-2xl sm:h-16 sm:w-16 sm:text-3xl"
+          className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#c8102e]/10 text-2xl sm:h-16 sm:w-16 sm:text-3xl"
           aria-hidden
         >
-          {image}
+          {image.startsWith('/') ? (
+            <Image
+              src={image}
+              alt={name}
+              width={64}
+              height={64}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            image
+          )}
         </div>
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-bold tracking-tight text-[#0b0b0f] sm:text-xl">
