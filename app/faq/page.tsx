@@ -59,19 +59,19 @@ export default function FAQ() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Frequently Asked Questions</h1>
-          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Frequently Asked Questions</h1>
+          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
             Everything you need to know about Bergen County Xpress
           </p>
         </div>
       </section>
 
       {/* FAQ Accordion */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -79,11 +79,11 @@ export default function FAQ() {
               >
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-inset transition-colors"
+                  className="flex w-full min-h-[48px] items-center justify-between gap-3 px-4 py-3 text-left focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-inset transition-colors sm:px-6 sm:py-4"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   aria-expanded={openIndex === index}
                 >
-                  <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                  <span className="text-base font-semibold text-gray-900 sm:text-lg">{faq.question}</span>
                   <svg
                     className={`h-5 w-5 text-gray-500 transition-transform ${
                       openIndex === index ? 'rotate-180' : ''
@@ -97,8 +97,8 @@ export default function FAQ() {
                   </svg>
                 </button>
                 {openIndex === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-600">{faq.answer}</p>
+                  <div className="px-4 pb-4 sm:px-6">
+                    <p className="text-sm text-gray-600 sm:text-base">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -108,16 +108,16 @@ export default function FAQ() {
       </section>
 
       {/* Still Have Questions */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Still Have Questions?
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-lg">
               We're here to help! Contact us and we'll get back to you as soon as possible.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <a
                 href="mailto:info@bergencountyxpress.com"
                 className="bcx-btn"

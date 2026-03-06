@@ -56,35 +56,35 @@ export default function Register() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Register for BCX</h1>
-          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Register for BCX</h1>
+          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
             Join Bergen County Xpress and start your track & field journey
           </p>
         </div>
       </section>
 
       {/* Registration Form */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {submitStatus === 'success' ? (
-            <div className="rounded-lg bg-green-50 border border-green-200 p-8 text-center">
+            <div className="rounded-lg bg-green-50 border border-green-200 p-6 text-center sm:p-8">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                 <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
               </div>
-              <h2 className="mt-4 text-2xl font-bold text-gray-900">Registration Submitted!</h2>
-              <p className="mt-2 text-gray-600">
+              <h2 className="mt-4 text-xl font-bold text-gray-900 sm:text-2xl">Registration Submitted!</h2>
+              <p className="mt-2 text-sm text-gray-600 sm:text-base">
                 Thank you for registering with Bergen County Xpress. We'll review your application and contact you within 2-3 business days.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
               {/* Athlete Information */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Athlete Information</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 sm:text-2xl sm:mb-6">Athlete Information</h2>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="athleteFirstName" className="block text-sm font-medium text-gray-700">
@@ -151,8 +151,8 @@ export default function Register() {
               </div>
 
               {/* Parent/Guardian Information */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Parent/Guardian Information</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 sm:text-2xl sm:mb-6">Parent/Guardian Information</h2>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="parentGuardianName" className="block text-sm font-medium text-gray-700">
@@ -258,8 +258,8 @@ export default function Register() {
               </div>
 
               {/* Emergency Contact */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Emergency Contact</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 sm:text-2xl sm:mb-6">Emergency Contact</h2>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="emergencyContact" className="block text-sm font-medium text-gray-700">
@@ -293,8 +293,8 @@ export default function Register() {
               </div>
 
               {/* Program Selection */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Program Selection</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 sm:text-2xl sm:mb-6">Program Selection</h2>
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="program" className="block text-sm font-medium text-gray-700">
@@ -337,8 +337,8 @@ export default function Register() {
               </div>
 
               {/* Medical Information */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Medical Information</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 sm:text-2xl sm:mb-6">Medical Information</h2>
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="medicalConditions" className="block text-sm font-medium text-gray-700">
@@ -414,8 +414,8 @@ export default function Register() {
               </div>
 
               {/* Terms and Agreement */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex items-start">
+              <div className="rounded-lg border border-gray-200 bg-white p-4 sm:p-6">
+                <div className="flex items-start gap-3">
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -423,9 +423,9 @@ export default function Register() {
                     required
                     checked={formData.agreeToTerms}
                     onChange={handleChange}
-                    className="h-4 w-4 rounded border-gray-300 text-[#c8102e] focus:ring-[#c8102e]"
+                    className="h-4 w-4 mt-0.5 shrink-0 rounded border-gray-300 text-[#c8102e] focus:ring-[#c8102e]"
                   />
-                  <label htmlFor="agreeToTerms" className="ml-3 text-sm text-gray-700">
+                  <label htmlFor="agreeToTerms" className="text-sm text-gray-700">
                     I agree to the terms and conditions, waiver of liability, and code of conduct. *
                   </label>
                 </div>
@@ -436,11 +436,11 @@ export default function Register() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex justify-end">
+              <div className="flex flex-col sm:flex-row sm:justify-end">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bcx-btn disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bcx-btn w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Registration'}
                 </button>

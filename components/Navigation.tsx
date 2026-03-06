@@ -23,8 +23,8 @@ export default function Navigation() {
         <div className="flex h-20 items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-12 w-40 sm:w-48">
+          <Link href="/" className="flex items-center gap-2 min-w-0 sm:gap-3">
+            <div className="relative h-10 w-28 shrink-0 sm:h-12 sm:w-40 lg:w-48">
               <Image
                 src="/bcx-logo.png"
                 alt="Bergen County Xpress"
@@ -107,12 +107,12 @@ export default function Navigation() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
-          <div className="space-y-1 border-t border-gray-200 px-2 pb-3 pt-2">
+          <div className="space-y-1 border-t border-gray-200 px-4 pb-4 pt-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block rounded-md px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors duration-200 min-h-[44px] flex items-center ${
                   link.href === '/register'
                     ? 'bg-[#c8102e] text-white hover:bg-[#9f0d24]'
                     : 'text-gray-700 hover:bg-gray-50 hover:text-[#c8102e]'

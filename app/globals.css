@@ -32,14 +32,15 @@ html {
   outline-offset: 2px;
 }
 
-/* BCX Button Utilities */
+/* BCX Button Utilities - 44px min height for touch targets on mobile */
 .bcx-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
   background-color: #c8102e;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 2.75rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -47,6 +48,13 @@ html {
   transition: all 0.2s ease-in-out;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .bcx-btn {
+    padding: 0.75rem 2rem;
+    min-height: auto;
+  }
 }
 
 .bcx-btn:hover {
@@ -77,12 +85,20 @@ html {
   border-radius: 0.5rem;
   background-color: transparent;
   border: 2px solid #0b0b0f;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 2.75rem;
   font-size: 1rem;
   font-weight: 600;
   color: #0b0b0f;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .bcx-btn-outline {
+    padding: 0.75rem 2rem;
+    min-height: auto;
+  }
 }
 
 .bcx-btn-outline:hover {
@@ -100,7 +116,7 @@ html {
   transform: translateY(0);
 }
 
-/* Typography improvements */
+/* Typography improvements - responsive with minimum readable sizes */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -108,13 +124,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
 }
 
 h2 {
-  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-size: clamp(1.25rem, 3vw + 0.25rem, 1.875rem);
+}
+
+/* Prevent horizontal overflow on small screens */
+html {
+  overflow-x: hidden;
+}
+
+/* Safe area for notched devices (sticky/fixed elements) */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-area-right {
+    padding-right: env(safe-area-inset-right);
+  }
 }

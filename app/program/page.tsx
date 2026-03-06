@@ -48,26 +48,26 @@ export default function Program() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Our Programs</h1>
-          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Our Programs</h1>
+          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
             Comprehensive training programs designed to develop young athletes at every level
           </p>
         </div>
       </section>
 
       {/* Programs Grid */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {programs.map((program) => (
               <div
                 key={program.name}
-                className="flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="flex flex-col rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-6"
               >
-                <h2 className="text-2xl font-bold text-gray-900">{program.name}</h2>
-                <p className="mt-2 text-gray-600">{program.description}</p>
+                <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">{program.name}</h2>
+                <p className="mt-2 text-sm text-gray-600 sm:text-base">{program.description}</p>
                 <div className="mt-4 flex-1">
                   <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Events</h3>
                   <ul className="mt-2 space-y-1">
@@ -88,25 +88,25 @@ export default function Program() {
       </section>
 
       {/* Training Schedule */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Training Schedule</h2>
-            <div className="mt-8 space-y-6">
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900">Regular Season</h3>
-                <div className="mt-4 space-y-2 text-gray-600">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Training Schedule</h2>
+            <div className="mt-6 space-y-4 sm:mt-8 sm:space-y-6">
+              <div className="rounded-lg bg-white p-4 shadow-sm sm:p-6">
+                <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">Regular Season</h3>
+                <div className="mt-3 space-y-2 text-sm text-gray-600 sm:mt-4 sm:text-base">
                   <p><strong className="text-gray-900">Monday - Thursday:</strong> 4:00 PM - 6:00 PM</p>
                   <p><strong className="text-gray-900">Saturday:</strong> 9:00 AM - 11:00 AM</p>
-                  <p className="text-sm text-gray-500">Training sessions include warm-up, technique work, conditioning, and cool-down.</p>
+                  <p className="text-xs text-gray-500 sm:text-sm">Training sessions include warm-up, technique work, conditioning, and cool-down.</p>
                 </div>
               </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900">Competition Season</h3>
-                <div className="mt-4 space-y-2 text-gray-600">
+              <div className="rounded-lg bg-white p-4 shadow-sm sm:p-6">
+                <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">Competition Season</h3>
+                <div className="mt-3 space-y-2 text-sm text-gray-600 sm:mt-4 sm:text-base">
                   <p><strong className="text-gray-900">Meets:</strong> Weekends (varies by schedule)</p>
                   <p><strong className="text-gray-900">Practice:</strong> Monday - Friday, 4:00 PM - 6:00 PM</p>
-                  <p className="text-sm text-gray-500">Additional training sessions may be scheduled based on competition calendar.</p>
+                  <p className="text-xs text-gray-500 sm:text-sm">Additional training sessions may be scheduled based on competition calendar.</p>
                 </div>
               </div>
             </div>

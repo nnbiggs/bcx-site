@@ -14,13 +14,17 @@ export default function StickyRegisterButton() {
   return (
     <Link
       href="/register"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full bg-[#c8102e] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:bg-[#9f0d24] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2"
+      className="fixed z-50 flex items-center justify-center gap-2 rounded-full bg-[#c8102e] px-5 py-3.5 min-h-[48px] min-w-[48px] text-sm font-bold text-white shadow-lg transition-all duration-200 hover:bg-[#9f0d24] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2"
+      style={{
+        bottom: 'max(1rem, env(safe-area-inset-bottom))',
+        right: 'max(1rem, env(safe-area-inset-right))',
+      }}
       aria-label="Register for BCX"
     >
       <span className="hidden sm:inline">Register Now</span>
       <span className="sm:hidden">Register</span>
       <svg
-        className="ml-2 h-5 w-5"
+        className="h-5 w-5 shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="2"

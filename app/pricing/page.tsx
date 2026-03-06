@@ -23,32 +23,32 @@ export default function Pricing() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Pricing</h1>
-          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Pricing</h1>
+          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
             Choose the plan that fits your athlete's level.
           </p>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:max-w-4xl lg:mx-auto">
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className="relative flex flex-col rounded-2xl border-2 border-gray-200 bg-white p-8 shadow-lg transition-shadow hover:shadow-xl"
+                className="relative flex flex-col rounded-2xl border-2 border-gray-200 bg-white p-5 shadow-lg transition-shadow hover:shadow-xl sm:p-8"
               >
-                <h2 className="text-2xl font-bold text-[#0b0b0f]">{plan.name}</h2>
-                <p className="mt-3 text-gray-600">{plan.description}</p>
-                <div className="mt-6">
-                  <span className="text-5xl font-bold text-[#0b0b0f]">{plan.price}</span>
+                <h2 className="text-xl font-bold text-[#0b0b0f] sm:text-2xl">{plan.name}</h2>
+                <p className="mt-2 text-sm text-gray-600 sm:mt-3 sm:text-base">{plan.description}</p>
+                <div className="mt-4 sm:mt-6">
+                  <span className="text-4xl font-bold text-[#0b0b0f] sm:text-5xl">{plan.price}</span>
                 </div>
                 <Link
                   href="/register"
-                  className="mt-8 block w-full rounded-lg bg-[#c8102e] px-6 py-3 text-center text-base font-semibold text-white transition-colors duration-200 hover:bg-[#9f0d24] focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2"
+                  className="mt-6 flex items-center justify-center min-h-[48px] w-full rounded-lg bg-[#c8102e] px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#9f0d24] focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2 sm:mt-8"
                 >
                   Register
                 </Link>
@@ -59,12 +59,12 @@ export default function Pricing() {
       </section>
 
       {/* Payment Policy */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-[#0b0b0f]">Payment Policy</h2>
-            <div className="mt-8 rounded-lg bg-white p-6 shadow-sm">
-              <ul className="space-y-4 text-gray-700">
+            <h2 className="text-2xl font-bold tracking-tight text-[#0b0b0f] sm:text-3xl">Payment Policy</h2>
+            <div className="mt-6 rounded-lg bg-white p-4 shadow-sm sm:mt-8 sm:p-6">
+              <ul className="space-y-4 text-sm text-gray-700 sm:text-base">
                 <li className="flex items-start">
                   <svg
                     className="h-5 w-5 flex-shrink-0 mt-0.5 text-[#c8102e]"
@@ -111,13 +111,13 @@ export default function Pricing() {
       </section>
 
       {/* Equipment Requirement */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <div className="rounded-lg border-2 border-[#c8102e] bg-[#c8102e]/5 p-6 shadow-sm">
-              <div className="flex items-start">
+            <div className="rounded-lg border-2 border-[#c8102e] bg-[#c8102e]/5 p-4 shadow-sm sm:p-6">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <svg
-                  className="h-6 w-6 flex-shrink-0 mt-0.5 text-[#c8102e]"
+                  className="h-5 w-5 shrink-0 mt-0.5 text-[#c8102e] sm:h-6 sm:w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
@@ -125,9 +125,9 @@ export default function Pricing() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
                 </svg>
-                <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-[#0b0b0f]">Equipment Requirement</h3>
-                  <p className="mt-2 text-gray-700">
+                <div className="min-w-0">
+                  <h3 className="text-lg font-semibold text-[#0b0b0f] sm:text-xl">Equipment Requirement</h3>
+                  <p className="mt-2 text-sm text-gray-700 sm:text-base">
                     <strong>Running shoes only — no Jordans</strong>
                   </p>
                 </div>
