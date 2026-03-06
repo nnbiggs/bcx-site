@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import RegisterCTA from '@/components/RegisterCTA';
+import FadeInSection from '@/components/FadeInSection';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -57,6 +58,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
+      <FadeInSection>
       <section className="section bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="section-head text-center">
@@ -104,8 +106,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeInSection>
 
       {/* Recent Achievements — Meet results */}
+      <FadeInSection>
       <section className="bg-gray-50 py-14 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
@@ -185,8 +189,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeInSection>
 
       {/* 2026 Season Information Section */}
+      <FadeInSection>
       <section className="bg-gray-50 py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
@@ -333,8 +339,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeInSection>
 
       {/* Testimonials */}
+      <FadeInSection>
       <section className="py-14 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
@@ -409,6 +417,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeInSection>
 
       <RegisterCTA
         headline="Join the 2026 season — register today."
