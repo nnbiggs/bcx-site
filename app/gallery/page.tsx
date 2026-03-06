@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import RegisterCTA from '@/components/RegisterCTA';
 
 export const metadata: Metadata = {
   title: 'Gallery',
-  description: 'View photos and highlights from Bergen County Xpress track and field meets, training sessions, and team events.',
+  description: 'Photos and highlights from Bergen County Xpress track and field meets, training sessions, and team events. See BCX athletes in action at AAU Junior Olympics and more.',
+  openGraph: {
+    title: 'Gallery | Bergen County Xpress',
+    description: 'Photos and highlights from BCX track and field meets, training, and team events. Youth athletics in Bergen County.',
+    url: '/gallery',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gallery | Bergen County Xpress',
+    description: 'Photos and highlights from BCX track and field meets and team events.',
+  },
 };
 
 const GALLERY_IMAGES = [
@@ -20,7 +32,7 @@ const GALLERY_IMAGES = [
 
 export default function Gallery() {
   return (
-    <div className="bg-white">
+    <div className="bg-white min-w-0">
       {/* Header */}
       <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -34,7 +46,7 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-6 text-center text-sm text-gray-600 sm:mb-8 sm:text-base">
+          <p className="mb-6 text-center text-sm text-gray-600 sm:mb-8 sm:text-base px-1 min-w-0">
             More BCX photos can be found at{' '}
             <a
               href="https://njsportsphotography.com"
@@ -70,27 +82,11 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-gray-50 py-10 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              Be Part of Our Story
-            </h2>
-            <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-lg">
-              Join BCX and create your own memorable moments on and off the track.
-            </p>
-            <div className="mt-6 sm:mt-8">
-              <a
-                href="/register"
-                className="bcx-btn"
-              >
-                Join the Team
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <RegisterCTA
+        headline="Be part of our story."
+        supportingCopy="Join BCX and create your own memorable moments on and off the track. Register for the 2026 season today."
+        buttonText="Register for the 2026 Season"
+      />
     </div>
   );
 }

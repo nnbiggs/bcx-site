@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import RegisterCTA from '@/components/RegisterCTA';
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Bergen County Xpress (BCX) - Premier youth track and field club developing young athletes through expert coaching and comprehensive training programs.',
+  description: 'Bergen County Xpress (BCX) is your premier youth track & field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 6–18. Register for the 2026 season.',
+  openGraph: {
+    title: 'Bergen County Xpress | Youth Track & Field Club',
+    description: 'Premier youth track and field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 6–18.',
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bergen County Xpress | Youth Track & Field Club',
+    description: 'Premier youth track and field club in Bergen County. Expert coaching for youth athletes ages 6–18.',
+  },
 };
 
 export default function Home() {
@@ -14,7 +26,7 @@ export default function Home() {
         {/* Subtle accent for depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="mx-auto max-w-4xl text-center min-w-0">
             {/* Who it's for — badge */}
             <p className="inline-flex items-center rounded-full bg-[#c8102e]/10 px-3 py-1.5 text-xs font-semibold text-[#c8102e] ring-1 ring-[#c8102e]/20 sm:px-4 sm:text-sm text-center max-w-[90vw] sm:max-w-none">
               For youth athletes ages 6–18 in Bergen County
@@ -249,27 +261,87 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-[#0b0b0f] py-14 sm:py-24">
+      {/* Testimonials */}
+      <section className="py-14 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl sm:text-5xl">
-              Ready to join BCX?
+          <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0b0b0f] sm:text-4xl sm:text-5xl">
+              What <span className="text-[#c8102e]">Families</span> Say
             </h2>
-            <p className="mt-4 text-base text-gray-300 sm:mt-6 sm:text-xl">
-              Register for the 2026 season and take the first step toward your track & field goals.
+            <p className="mt-4 text-lg text-gray-700 sm:mt-6 sm:text-xl">
+              Parents and athletes share their experience with Bergen County Xpress.
             </p>
-            <div className="mt-8 sm:mt-10">
-              <Link
-                href="/register"
-                className="bcx-btn text-base px-6 py-3.5 sm:text-lg sm:px-8 sm:py-4"
-              >
-                Register for the 2026 Season
-              </Link>
+          </div>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 min-w-0">
+            <div className="flex flex-col rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:p-8">
+              <svg className="h-10 w-10 text-[#c8102e]/30 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <blockquote className="mt-4 flex-1 text-gray-700 text-sm leading-6 sm:text-base sm:leading-7">
+                BCX gave my daughter the confidence and skills she needed. The coaches are patient, knowledgeable, and truly care about every athlete. We could not be happier.
+              </blockquote>
+              <footer className="mt-6 pt-4 border-t border-gray-100">
+                <p className="font-semibold text-[#0b0b0f]">— Parent of athlete</p>
+                <p className="text-sm text-gray-500">Teaneck</p>
+              </footer>
+            </div>
+            <div className="flex flex-col rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:p-8">
+              <svg className="h-10 w-10 text-[#c8102e]/30 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <blockquote className="mt-4 flex-1 text-gray-700 text-sm leading-6 sm:text-base sm:leading-7">
+                The program is well organized and the practice schedule works for our family. My son has improved in every event and made great friends. Highly recommend.
+              </blockquote>
+              <footer className="mt-6 pt-4 border-t border-gray-100">
+                <p className="font-semibold text-[#0b0b0f]">— Parent of athlete</p>
+                <p className="text-sm text-gray-500">Bergen County</p>
+              </footer>
+            </div>
+            <div className="flex flex-col rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:p-8">
+              <svg className="h-10 w-10 text-[#c8102e]/30 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <blockquote className="mt-4 flex-1 text-gray-700 text-sm leading-6 sm:text-base sm:leading-7">
+                I love practice. The coaches push us to get better and my teammates are awesome. Best track club around.
+              </blockquote>
+              <footer className="mt-6 pt-4 border-t border-gray-100">
+                <p className="font-semibold text-[#0b0b0f]">— Youth athlete</p>
+                <p className="text-sm text-gray-500">BCX member</p>
+              </footer>
+            </div>
+            <div className="flex flex-col rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:p-8">
+              <svg className="h-10 w-10 text-[#c8102e]/30 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <blockquote className="mt-4 flex-1 text-gray-700 text-sm leading-6 sm:text-base sm:leading-7">
+                From first practice to AAU Junior Olympics, BCX supported our whole journey. Professional, fun, and results-oriented. Worth every minute.
+              </blockquote>
+              <footer className="mt-6 pt-4 border-t border-gray-100">
+                <p className="font-semibold text-[#0b0b0f]">— Parent of athlete</p>
+                <p className="text-sm text-gray-500">Bergen County</p>
+              </footer>
+            </div>
+            <div className="flex flex-col rounded-2xl bg-white border border-gray-200 p-6 shadow-sm sm:p-8">
+              <svg className="h-10 w-10 text-[#c8102e]/30 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <blockquote className="mt-4 flex-1 text-gray-700 text-sm leading-6 sm:text-base sm:leading-7">
+                The community here is special. Other parents, coaches, and kids all root for each other. It feels like family, not just a team.
+              </blockquote>
+              <footer className="mt-6 pt-4 border-t border-gray-100">
+                <p className="font-semibold text-[#0b0b0f]">— Parent of athlete</p>
+                <p className="text-sm text-gray-500">Bergen County</p>
+              </footer>
             </div>
           </div>
         </div>
       </section>
+
+      <RegisterCTA
+        headline="Join the 2026 season — register today."
+        supportingCopy="Secure your spot with Bergen County Xpress. Expert coaching, full-event training, and a team that supports every athlete."
+        buttonText="Register for the 2026 Season"
+      />
     </>
   );
 }

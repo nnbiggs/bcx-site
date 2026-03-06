@@ -1,8 +1,20 @@
 import type { Metadata } from 'next';
+import RegisterCTA from '@/components/RegisterCTA';
 
 export const metadata: Metadata = {
   title: 'Program',
-  description: 'Explore our comprehensive track and field training programs for youth athletes. From sprints to distance, jumps to throws, we offer programs for all skill levels.',
+  description: 'Explore BCX track and field programs: sprints, distance, jumps, throws, and multi-events for ages 6–18. Comprehensive training for every skill level.',
+  openGraph: {
+    title: 'Program | Bergen County Xpress',
+    description: 'Comprehensive track and field programs for youth athletes. Sprints, distance, jumps, throws, and multi-events for all skill levels.',
+    url: '/program',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Program | Bergen County Xpress',
+    description: 'Track and field programs for youth athletes. All events, all skill levels.',
+  },
 };
 
 export default function Program() {
@@ -46,7 +58,7 @@ export default function Program() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white min-w-0">
       {/* Header */}
       <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -113,6 +125,12 @@ export default function Program() {
           </div>
         </div>
       </section>
+
+      <RegisterCTA
+        headline="Ready to train with us?"
+        supportingCopy="Choose your program and register for the 2026 season. Our staff will help find the right fit for your athlete."
+        buttonText="Register for the 2026 Season"
+      />
     </div>
   );
 }

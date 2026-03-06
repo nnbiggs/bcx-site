@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import RegisterCTA from '@/components/RegisterCTA';
 
 export const metadata: Metadata = {
   title: 'Pricing',
-  description: 'Affordable pricing options for Bergen County Xpress track and field programs. Flexible payment plans available.',
+  description: 'Bergen County Xpress pricing: First Half Elite $625, Full Novice $300. Payment after second practice. Flexible options for youth track & field in Bergen County.',
+  openGraph: {
+    title: 'Pricing | Bergen County Xpress',
+    description: 'Affordable pricing for BCX track and field programs. First Half Elite and Full Novice options. Payment after your second practice.',
+    url: '/pricing',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pricing | Bergen County Xpress',
+    description: 'Affordable pricing for youth track and field programs in Bergen County.',
+  },
 };
 
 export default function Pricing() {
@@ -21,7 +33,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white min-w-0">
       {/* Header */}
       <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -136,6 +148,12 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
+      <RegisterCTA
+        headline="Ready to get started?"
+        supportingCopy="Select your plan and register for the 2026 season. Payment is collected after your second practice."
+        buttonText="Register for the 2026 Season"
+      />
     </div>
   );
 }

@@ -1,5 +1,7 @@
 # Gallery images
 
+All gallery images are rendered with Next.js `next/image` for automatic optimization (WebP/AVIF, responsive sizes, lazy loading). No `unoptimized` assets are used.
+
 BCX photos displayed on the site gallery:
 
 - **athlete-in-action.png** – Athlete on the field
