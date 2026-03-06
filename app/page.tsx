@@ -48,7 +48,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60" aria-hidden />
         <div className="relative z-10 w-full max-w-5xl px-6 py-20 text-center sm:px-8 lg:px-12">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/80 sm:text-sm">
-            Youth track & field · Ages 13–18 · Bergen County
+            Youth track & field · Ages 6–13 · Bergen County
           </p>
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             Run fast.<br />Jump high.<br /><span className="text-[#c8102e]">Throw far.</span>
