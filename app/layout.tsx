@@ -47,9 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-white font-sans antialiased">
+      <body className="min-h-screen min-h-[100dvh] bg-white font-sans antialiased flex flex-col">
         <Navigation />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full min-w-0">{children}</main>
         <Footer />
         <StickyRegisterButton />
       </body>

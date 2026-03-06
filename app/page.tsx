@@ -16,7 +16,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
           <div className="mx-auto max-w-4xl text-center">
             {/* Who it's for — badge */}
-            <p className="inline-flex items-center rounded-full bg-[#c8102e]/10 px-3 py-1.5 text-xs font-semibold text-[#c8102e] ring-1 ring-[#c8102e]/20 sm:px-4 sm:text-sm">
+            <p className="inline-flex items-center rounded-full bg-[#c8102e]/10 px-3 py-1.5 text-xs font-semibold text-[#c8102e] ring-1 ring-[#c8102e]/20 sm:px-4 sm:text-sm text-center max-w-[90vw] sm:max-w-none">
               For youth athletes ages 6–18 in Bergen County
             </p>
 

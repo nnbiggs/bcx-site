@@ -18,9 +18,9 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
+    <nav className="sticky top-0 z-50 bg-white shadow-md safe-area-inset-top">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 min-h-[64px] sm:h-20 items-center justify-between gap-2">
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 min-w-0 sm:gap-3">
@@ -64,7 +64,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#c8102e] transition-colors duration-200"
+            className="md:hidden inline-flex items-center justify-center rounded-lg p-3 min-h-[44px] min-w-[44px] text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#c8102e] transition-colors duration-200"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}

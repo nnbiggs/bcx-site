@@ -60,9 +60,9 @@ export default function Gallery() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <p className="font-semibold">{item.title}</p>
-                  <p className="mt-1 text-sm text-white/90">{item.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:p-4">
+                  <p className="font-semibold line-clamp-2 text-sm sm:text-base">{item.title}</p>
+                  <p className="mt-1 text-xs text-white/90 line-clamp-2 sm:text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
