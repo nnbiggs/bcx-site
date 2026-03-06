@@ -6,28 +6,19 @@ export const metadata: Metadata = {
   description: 'View photos and highlights from Bergen County Xpress track and field meets, training sessions, and team events.',
 };
 
-// Pictures from Bergen Xpress (https://bergenxpress.com/?page_id=211): IMG_1592, IMG_1589, IMG_1590, 20150608_195255
-// Hosted locally in public/gallery/. Replace these files with the real BCX photos if you get them from NJSportsPhotography or the club.
 const GALLERY_IMAGES = [
-  { id: 1, category: 'BCX', title: 'IMG_1592', description: 'Bergen Xpress track and field', src: '/gallery/IMG_1592.jpg' },
-  { id: 2, category: 'BCX', title: 'IMG_1589', description: 'Bergen Xpress track and field', src: '/gallery/IMG_1589.jpg' },
-  { id: 3, category: 'BCX', title: 'IMG_1590', description: 'Bergen Xpress track and field', src: '/gallery/IMG_1590.jpg' },
-  { id: 4, category: 'BCX', title: 'June 8, 2015', description: '20150608_195255 – Meet highlights', src: '/gallery/20150608_195255.jpg' },
-];
-
-// Fallback placeholder items when external images aren't available or for variety
-const PLACEHOLDER_ITEMS = [
-  { id: 5, category: 'Competition', title: 'State Championships 2024', description: 'Our athletes competing at the state level' },
-  { id: 6, category: 'Training', title: 'Track Practice', description: 'Athletes working on technique and speed' },
-  { id: 7, category: 'Team', title: 'Team Photo', description: '2024 BCX team members' },
-  { id: 8, category: 'Competition', title: 'Regional Meet', description: 'Strong performances at regional competition' },
-  { id: 9, category: 'Training', title: 'Strength & Conditioning', description: 'Building power and endurance' },
-  { id: 10, category: 'Team', title: 'Team Building', description: 'Fun activities and team bonding' },
+  { id: 1, category: 'Training', title: 'Athlete in action', description: 'BCX athlete on the field', src: '/gallery/athlete-in-action.png' },
+  { id: 2, category: 'AAU Junior Olympics', title: 'Coach and athlete', description: 'BCX coach and athlete at AAU Junior Olympic Games', src: '/gallery/coach-athlete-aau.png' },
+  { id: 3, category: 'Team', title: 'BCX athletes', description: 'Bergen County Xpress athletes at the track', src: '/gallery/bcx-athletes-four.png' },
+  { id: 4, category: 'Competition', title: 'Championship medals', description: 'BCX athlete at AAU Junior Olympic Games', src: '/gallery/athlete-medals.png' },
+  { id: 5, category: 'Competition', title: 'Double medal winner', description: 'BCX athlete celebrating at AAU Junior Olympics', src: '/gallery/athlete-girl-medals.png' },
+  { id: 6, category: 'Team', title: 'Coaches and athlete', description: 'BCX coaches with athlete at AAU Junior Olympic Games', src: '/gallery/bcx-coaches-and-athlete.png' },
+  { id: 7, category: 'Team', title: 'BCX family', description: 'Track & field community at the meet', src: '/gallery/bcx-group.png' },
+  { id: 8, category: 'Community', title: 'BCX Parent Relay', description: 'Parents and supporters at the relay', src: '/gallery/bcx-parent-relay.png' },
+  { id: 9, category: 'Team', title: 'BCX coaches', description: 'Bergen County Xpress coaching staff', src: '/gallery/bcx-coaches.png' },
 ];
 
 export default function Gallery() {
-  const galleryItems = [...GALLERY_IMAGES, ...PLACEHOLDER_ITEMS];
-
   return (
     <div className="bg-white">
       {/* Header */}
@@ -56,39 +47,25 @@ export default function Gallery() {
             {' '}in the gallery under Bergen County Xpress.
           </p>
           <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {galleryItems.map((item) => {
-              const hasImage = 'src' in item && item.src;
-              return (
+            {GALLERY_IMAGES.map((item) => (
               <div
                 key={item.id}
-                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c8102e]/10 to-[#c8102e]/20 shadow-md transition-transform hover:scale-105"
+                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 shadow-md transition-transform hover:scale-[1.02]"
               >
-                {hasImage ? (
-                  <Image
-                    src={(item as { src: string }).src}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    unoptimized
-                  />
-                ) : (
-                <div className="flex h-full items-center justify-center">
-                  <div className="text-center">
-                    <div className="mb-2 text-6xl">🏃</div>
-                    <p className="text-sm font-medium text-gray-700">{item.category}</p>
-                  </div>
-                </div>
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <p className="font-semibold">{item.title}</p>
-                    <p className="mt-1 text-sm text-gray-200">{item.description}</p>
-                  </div>
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  className={`transition-transform duration-300 group-hover:scale-105 ${[2, 3, 6].includes(item.id) ? 'object-cover object-top' : 'object-cover'}`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <p className="font-semibold">{item.title}</p>
+                  <p className="mt-1 text-sm text-white/90">{item.description}</p>
                 </div>
               </div>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>

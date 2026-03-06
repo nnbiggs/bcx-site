@@ -1,12 +1,15 @@
 # Gallery images
 
-These four images correspond to the pictures listed on [Bergen Xpress Pictures](https://bergenxpress.com/?page_id=211):
+BCX photos displayed on the site gallery:
 
-- **IMG_1592.jpg**
-- **IMG_1589.jpg**
-- **IMG_1590.jpg**
-- **20150608_195255.jpg**
+- **athlete-in-action.png** – Athlete on the field
+- **coach-athlete-aau.png** – Coach and athlete at AAU Junior Olympic Games
+- **bcx-athletes-four.png** – BCX athletes at the track
+- **athlete-medals.png** – Championship medals at AAU Junior Olympics
+- **athlete-girl-medals.png** – BCX athlete celebrating at AAU Junior Olympics
+- **bcx-coaches-and-athlete.png** – BCX coaches with athlete at AAU Junior Olympic Games
+- **bcx-group.png** – Track & field community at the meet
+- **bcx-parent-relay.png** – BCX Parent Relay
+- **bcx-coaches.png** – Bergen County Xpress coaching staff
 
-The originals are no longer available for download from bergenxpress.com (URLs return 404). The files here are placeholders so the gallery displays correctly.
-
-To use the real BCX photos: replace these files with the actual images (e.g. from [NJSportsPhotography](https://njsportsphotography.com) → gallery → Bergen County Xpress, or from the club). Keep the same filenames so the gallery page does not need changes.
+More BCX photos: [NJSportsPhotography](https://njsportsphotography.com) → gallery → Bergen County Xpress.
