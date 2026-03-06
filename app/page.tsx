@@ -6,17 +6,17 @@ import { FadeInSection } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Bergen County Xpress (BCX) is your premier youth track & field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 13–18. Register for the 2026 season.',
+  description: 'Bergen County Xpress (BCX) is your premier youth track & field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 6–13. Register for the 2026 season.',
   openGraph: {
     title: 'Bergen County Xpress | Youth Track & Field Club',
-    description: 'Premier youth track and field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 13–18.',
+    description: 'Premier youth track and field club in Bergen County. Expert coaching, full-event training, and a supportive team for athletes ages 6–13.',
     url: '/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Bergen County Xpress | Youth Track & Field Club',
-    description: 'Premier track and field club in Bergen County. Expert coaching for youth athletes ages 13–18.',
+    description: 'Premier track and field club in Bergen County. Expert coaching for youth athletes ages 6–13.',
   },
 };
 

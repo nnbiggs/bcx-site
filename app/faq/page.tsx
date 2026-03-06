@@ -62,7 +62,7 @@ const faqGroups: FaqGroup[] = [
       },
       {
         question: 'What age groups does BCX serve?',
-        answer: 'We welcome athletes ages 13–18. Programs are divided into age-appropriate groups: youth (13–14), and junior/senior (15–18).',
+        answer: 'We welcome athletes ages 6–13. Programs are divided into age-appropriate groups: youth (6–9), and junior (10–13).',
       },
       {
         question: 'When is payment due and how much?',

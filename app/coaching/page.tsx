@@ -101,9 +101,9 @@ const coaches = [
   },
   {
     name: 'Coach Kertis',
-    role: '11–14 Elite Sprints',
+    role: '11–13 Elite Sprints',
     credentials: '',
-    specialties: ['Elite Sprints', 'Ages 11–14'],
+    specialties: ['Elite Sprints', 'Ages 11–13'],
     bio: '',
     contact: '',
     image: '👨‍🏫',

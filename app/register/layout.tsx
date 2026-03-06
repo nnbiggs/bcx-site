@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Register your athlete for Bergen County Xpress 2026 season. Join our youth track and field club—expert coaching, full-event training, and a supportive team in Bergen County.',
   openGraph: {
     title: 'Register | Bergen County Xpress',
-    description: 'Register your athlete for BCX 2026 season. Youth track and field in Bergen County. Expert coaching for ages 13–18.',
+    description: 'Register your athlete for BCX 2026 season. Youth track and field in Bergen County. Expert coaching for ages 6–13.',
     url: '/register',
     type: 'website',
   },
