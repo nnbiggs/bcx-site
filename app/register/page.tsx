@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { PageHero } from '@/components/sections';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -54,23 +55,18 @@ export default function Register() {
 
   return (
     <div className="bg-white min-w-0">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Register for BCX</h1>
-          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
-            Join Bergen County Xpress and start your track & field journey
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Register for BCX"
+        subtitle="Join Bergen County Xpress and start your track & field journey"
+      />
 
       {/* Registration Form */}
-      <section className="py-10 sm:py-16">
+      <section className="py-10 sm:py-16" aria-label="Registration form">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {submitStatus === 'success' ? (
-            <div className="rounded-lg bg-green-50 border border-green-200 p-6 text-center sm:p-8">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-                <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+            <div className="rounded-lg bg-green-50 border border-green-200 p-6 text-center sm:p-8" role="status" aria-live="polite">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100" aria-hidden="true">
+                <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
               </div>
@@ -423,12 +419,13 @@ export default function Register() {
                     checked={formData.agreeToTerms}
                     onChange={handleChange}
                     className="h-4 w-4 mt-0.5 shrink-0 rounded border-gray-300 text-[#c8102e] focus:ring-[#c8102e]"
+                    aria-describedby="agreeToTerms-hint"
                   />
                   <label htmlFor="agreeToTerms" className="text-sm text-gray-700">
                     I agree to the terms and conditions, waiver of liability, and code of conduct. *
                   </label>
                 </div>
-                <p className="mt-2 text-xs text-gray-500">
+                <p id="agreeToTerms-hint" className="mt-2 text-xs text-gray-500">
                   By checking this box, you acknowledge that you have read and agree to our terms and conditions.
                   A detailed waiver will be provided for signature at the first practice.
                 </p>
@@ -440,6 +437,9 @@ export default function Register() {
                   type="submit"
                   disabled={isSubmitting}
                   className="bcx-btn w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-busy={isSubmitting}
+                  aria-live="polite"
+                  aria-label={isSubmitting ? 'Submitting registration' : 'Submit registration'}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Registration'}
                 </button>

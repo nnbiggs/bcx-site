@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import StickyRegisterButton from "@/components/StickyRegisterButton";
+import { Navigation, Footer, StickyRegisterButton } from '@/components/layout';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,8 +52,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen min-h-[100dvh] bg-white font-sans antialiased flex flex-col">
+        <a
+          href="#main-content"
+          className="skip-link"
+        >
+          Skip to main content
+        </a>
         <Navigation />
-        <main className="flex-1 w-full min-w-0">{children}</main>
+        <main id="main-content" className="flex-1 w-full min-w-0" role="main" aria-label="Main content">
+          {children}
+        </main>
         <Footer />
         <StickyRegisterButton />
       </body>

@@ -16,7 +16,6 @@ const mainLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -37,7 +36,6 @@ export default function Navigation() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 min-h-[64px] sm:h-[4.5rem] items-center justify-between gap-2">
-          {/* Logo - always first for focus order */}
           <Link
             href="/"
             className="flex items-center gap-2 min-w-0 sm:gap-3 focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2 rounded-lg"
@@ -59,7 +57,6 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Desktop: main links + primary CTA */}
           <div className="hidden md:flex md:items-center md:gap-1 lg:gap-2">
             <ul className="flex items-center gap-1 lg:gap-2" role="list">
               {mainLinks.map((link) => (
@@ -83,7 +80,6 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center rounded-lg p-3 min-h-[44px] min-w-[44px] text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-inset transition-colors"
@@ -105,7 +101,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile menu panel - only in DOM when open so focus stays predictable */}
       {isOpen && (
         <div
           id="mobile-menu"
@@ -113,7 +108,6 @@ export default function Navigation() {
           aria-label="Mobile navigation"
         >
           <div className="px-4 pb-4 pt-2">
-            {/* Primary action first on mobile */}
             <Link
               href="/register"
               className="mb-3 flex min-h-[48px] items-center justify-center rounded-lg bg-[#c8102e] px-4 py-3 text-base font-semibold text-white hover:bg-[#9f0d24] focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2"

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import RegisterCTA from '@/components/RegisterCTA';
+import { PageHero, RegisterCTA } from '@/components/sections';
 
 type FaqItem = { question: string; answer: string };
 type FaqGroup = { title: string; items: FaqItem[] };
@@ -98,18 +98,13 @@ export default function FAQ() {
 
   return (
     <div className="bg-white min-w-0">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Frequently Asked Questions</h1>
-          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
-            Training, schedule, and registration—answers in one place
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Frequently Asked Questions"
+        subtitle="Training, schedule, and registration—answers in one place"
+      />
 
       {/* FAQ Accordion by category */}
-      <section className="py-10 sm:py-16">
+      <section className="py-10 sm:py-16" aria-label="FAQ list">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-8 sm:space-y-10">
             {faqGroups.map((group) => (
@@ -177,10 +172,10 @@ export default function FAQ() {
       </section>
 
       {/* Still Have Questions */}
-      <section className="bg-gray-50 py-10 sm:py-16">
+      <section className="bg-gray-50 py-10 sm:py-16" aria-labelledby="still-have-questions-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 id="still-have-questions-heading" className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Still Have Questions?
             </h2>
             <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-lg">

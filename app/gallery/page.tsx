@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import RegisterCTA from '@/components/RegisterCTA';
+import { PageHero, RegisterCTA } from '@/components/sections';
 
 export const metadata: Metadata = {
   title: 'Gallery',
@@ -33,15 +33,10 @@ const GALLERY_IMAGES = [
 export default function Gallery() {
   return (
     <div className="bg-white min-w-0">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Gallery</h1>
-          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
-            Moments from our competitions, training, and team events
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Gallery"
+        subtitle="Moments from our competitions, training, and team events"
+      />
 
       {/* Gallery Grid */}
       <section className="py-10 sm:py-16">
@@ -53,6 +48,7 @@ export default function Gallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-[#c8102e] underline hover:no-underline"
+              aria-label="NJSportsPhotography gallery (opens in new tab)"
             >
               NJSportsPhotography
             </a>
@@ -66,7 +62,7 @@ export default function Gallery() {
               >
                 <Image
                   src={item.src}
-                  alt={item.title}
+                  alt={`${item.title}. ${item.description}`}
                   fill
                   className={`transition-transform duration-300 group-hover:scale-105 ${[2, 3, 6].includes(item.id) ? 'object-cover object-top' : 'object-cover'}`}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

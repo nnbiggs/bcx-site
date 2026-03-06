@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import RegisterCTA from '@/components/RegisterCTA';
+import { PageHero, RegisterCTA } from '@/components/sections';
 
 export const metadata: Metadata = {
   title: 'Program',
@@ -59,15 +59,10 @@ export default function Program() {
 
   return (
     <div className="bg-white min-w-0">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Our Programs</h1>
-          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
-            Comprehensive training programs designed to develop young athletes at every level
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Our Programs"
+        subtitle="Comprehensive training programs designed to develop young athletes at every level"
+      />
 
       {/* Programs Grid */}
       <section className="py-10 sm:py-16">

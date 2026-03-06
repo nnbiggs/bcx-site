@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import RegisterCTA from '@/components/RegisterCTA';
+import { PageHero, RegisterCTA } from '@/components/sections';
 
 export const metadata: Metadata = {
   title: 'Coaching',
@@ -213,20 +213,11 @@ function CoachCard({
 export default function Coaching() {
   return (
     <div className="bg-white min-w-0">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">
-            Coaching Staff
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
-            Experienced, certified coaches dedicated to your athlete&apos;s success
-          </p>
-          <p className="mt-3 text-sm text-red-100/90 sm:mt-4 sm:text-base">
-            All Bergen Xpress staff have passed NCSI criminal background checks.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Coaching Staff"
+        subtitle="Experienced, certified coaches dedicated to your athlete's success"
+        footnote="All Bergen Xpress staff have passed NCSI criminal background checks."
+      />
 
       {/* Intro + Coaches Grid */}
       <section className="py-10 sm:py-16 lg:py-20">

@@ -19,23 +19,16 @@ export default function FadeInSection({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-      },
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
       { threshold: 0.1, rootMargin }
     );
-
     observer.observe(el);
     return () => observer.disconnect();
   }, [rootMargin]);
 
   return (
-    <div
-      ref={ref}
-      className={`animate-fade-in ${visible ? 'is-visible' : ''} ${className}`}
-    >
+    <div ref={ref} className={`animate-fade-in ${visible ? 'is-visible' : ''} ${className}`}>
       {children}
     </div>
   );
