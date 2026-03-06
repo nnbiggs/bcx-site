@@ -54,53 +54,53 @@ export default function Coaching() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Coaching Staff</h1>
-          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Coaching Staff</h1>
+          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
             Experienced, certified coaches dedicated to your athlete's success
           </p>
-          <p className="mt-4 text-base text-red-100/90">
+          <p className="mt-3 text-sm text-red-100/90 sm:mt-4 sm:text-base">
             Bergen Xpress staff has passed NCSI criminal background checks.
           </p>
         </div>
       </section>
 
       {/* Coaches Grid */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {coaches.map((coach) => (
               <div
                 key={coach.name}
-                className="flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="flex flex-col rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:p-6"
               >
-                <div className="flex items-center space-x-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#c8102e]/10 text-4xl">
+                <div className="flex items-center gap-3 sm:space-x-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#c8102e]/10 text-3xl sm:h-16 sm:w-16 sm:text-4xl">
                     {coach.image}
                   </div>
                   <div className="min-w-0">
-                    <h2 className="text-xl font-bold text-[#0b0b0f]">{coach.name}</h2>
-                    <p className="text-sm font-medium text-[#c8102e]">{coach.role}</p>
+                    <h2 className="text-lg font-bold text-[#0b0b0f] sm:text-xl">{coach.name}</h2>
+                    <p className="text-xs font-medium text-[#c8102e] sm:text-sm">{coach.role}</p>
                   </div>
                 </div>
                 {coach.credentials && (
-                  <p className="mt-4 text-sm text-gray-500">{coach.credentials}</p>
+                  <p className="mt-3 text-xs text-gray-500 sm:mt-4 sm:text-sm">{coach.credentials}</p>
                 )}
                 {coach.bio && (
-                  <p className="mt-4 text-gray-600">{coach.bio}</p>
+                  <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">{coach.bio}</p>
                 )}
                 {coach.contact && (
                   <p className="mt-2 text-sm font-medium text-[#c8102e]">{coach.contact}</p>
                 )}
                 {coach.specialties.length > 0 && (
-                  <div className="mt-4">
-                    <h3 className="text-sm font-semibold text-gray-900">Specialties</h3>
-                    <div className="mt-2 flex flex-wrap gap-2">
+                  <div className="mt-3 sm:mt-4">
+                    <h3 className="text-xs font-semibold text-gray-900 sm:text-sm">Specialties</h3>
+                    <div className="mt-2 flex flex-wrap gap-1.5 sm:gap-2">
                       {coach.specialties.map((specialty) => (
                         <span
                           key={specialty}
-                          className="rounded-full bg-[#c8102e]/10 px-3 py-1 text-xs font-medium text-[#c8102e]"
+                          className="rounded-full bg-[#c8102e]/10 px-2.5 py-0.5 text-xs font-medium text-[#c8102e]"
                         >
                           {specialty}
                         </span>
@@ -115,36 +115,36 @@ export default function Coaching() {
       </section>
 
       {/* Coaching Philosophy */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Coaching Philosophy</h2>
-            <div className="mt-8 space-y-6">
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900">Athlete-Centered Approach</h3>
-                <p className="mt-2 text-gray-600">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Our Coaching Philosophy</h2>
+            <div className="mt-6 space-y-4 sm:mt-8 sm:space-y-6">
+              <div className="rounded-lg bg-white p-4 shadow-sm sm:p-6">
+                <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">Athlete-Centered Approach</h3>
+                <p className="mt-2 text-sm text-gray-600 sm:text-base">
                   We believe in developing the whole athlete - physically, mentally, and emotionally. 
                   Our coaches focus on individual growth and long-term development over short-term results.
                 </p>
               </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900">Technical Excellence</h3>
-                <p className="mt-2 text-gray-600">
+              <div className="rounded-lg bg-white p-4 shadow-sm sm:p-6">
+                <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">Technical Excellence</h3>
+                <p className="mt-2 text-sm text-gray-600 sm:text-base">
                   Proper technique is the foundation of performance and injury prevention. Our coaches 
                   emphasize fundamental skills and progressive skill development at every level.
                 </p>
               </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900">Positive Environment</h3>
-                <p className="mt-2 text-gray-600">
+              <div className="rounded-lg bg-white p-4 shadow-sm sm:p-6">
+                <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">Positive Environment</h3>
+                <p className="mt-2 text-sm text-gray-600 sm:text-base">
                   We create a supportive, encouraging atmosphere where athletes feel safe to take risks, 
                   make mistakes, and learn. Success is measured by effort, improvement, and character, 
                   not just wins and losses.
                 </p>
               </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900">Continuous Learning</h3>
-                <p className="mt-2 text-gray-600">
+              <div className="rounded-lg bg-white p-4 shadow-sm sm:p-6">
+                <h3 className="text-lg font-semibold text-gray-900 sm:text-xl">Continuous Learning</h3>
+                <p className="mt-2 text-sm text-gray-600 sm:text-base">
                   Our coaching staff regularly participates in continuing education, certifications, 
                   and professional development to stay current with best practices in track and field 
                   training and youth development.

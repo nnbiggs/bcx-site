@@ -31,19 +31,19 @@ export default function Gallery() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-20 text-white">
+      <section className="bg-gradient-to-br from-[#c8102e] to-[#9f0d24] py-12 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Gallery</h1>
-          <p className="mt-6 text-xl text-red-50 sm:text-2xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl sm:text-5xl lg:text-6xl">Gallery</h1>
+          <p className="mt-4 text-lg text-red-50 sm:mt-6 sm:text-xl lg:text-2xl">
             Moments from our competitions, training, and team events
           </p>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-8 text-center text-gray-600">
+          <p className="mb-6 text-center text-sm text-gray-600 sm:mb-8 sm:text-base">
             More BCX photos can be found at{' '}
             <a
               href="https://njsportsphotography.com"
@@ -55,7 +55,7 @@ export default function Gallery() {
             </a>
             {' '}in the gallery under Bergen County Xpress.
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {galleryItems.map((item) => {
               const hasImage = 'src' in item && item.src;
               return (
@@ -94,16 +94,16 @@ export default function Gallery() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Be Part of Our Story
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-lg">
               Join BCX and create your own memorable moments on and off the track.
             </p>
-            <div className="mt-8">
+            <div className="mt-6 sm:mt-8">
               <a
                 href="/register"
                 className="bcx-btn"
