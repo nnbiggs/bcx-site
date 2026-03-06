@@ -38,10 +38,10 @@ export default function Home() {
       {/* Hero — full-bleed, bold, minimal */}
       <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-black" aria-label="Introduction">
         <Image
-          src="/gallery/athlete-in-action.png"
+          src="/gallery/modern-sprinter.png"
           alt=""
           fill
-          className="object-cover object-center opacity-50"
+          className="object-cover object-center object-top opacity-50"
           sizes="100vw"
           priority
         />
@@ -50,8 +50,8 @@ export default function Home() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/80 sm:text-sm">
             Youth track & field · Ages 6–13 · Bergen County
           </p>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-            Run fast.<br />Jump high.<br /><span className="text-[#c8102e]">Throw far.</span>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            Run fast.<br />Jump high.<br /><span className="text-[#c8102e]">Sprint, jump & throw.</span>
           </h1>
           <p className="mt-8 max-w-xl mx-auto text-lg text-white/90 sm:text-xl">
             Bergen County Xpress. Expert coaching. One team.
